@@ -13,11 +13,14 @@
 
 body{
   background-color: #272727;
+  margin: 0 7vw;
 }
 
 
 h1{
-  color: #FBFBFB;
+  background-image: linear-gradient(165deg, rgba(59,246,134,1) 48%, rgba(76,169,255,1) 71%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-size: 3.5em;
   font-family: 'Sora', sans-serif;
   font-weight: 600;

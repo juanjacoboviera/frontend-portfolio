@@ -1,0 +1,31 @@
+.bio-container{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding-top: 50px;
+}
+
+.bio-data__container{
+    display: flex;
+    flex-direction: row;
+}
+
+.bio-text{
+    display: flex;
+    flex-direction: column;
+}
+
+.bio-text p {
+    margin-top: 10px;
+    width: 80%;
+}
+
+.profile-pic{
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.socialMedia-icons{
+    color: white; 
+    font-size: 32px;
+    margin: 10px 10px 0 10px;
+}

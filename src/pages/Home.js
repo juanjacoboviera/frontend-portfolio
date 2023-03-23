@@ -1,10 +1,18 @@
 import React from 'react'
-import Nav from '../components/nav/Nav'
+import About from '../about/About'
+import HeaderTitle from '../headerTitle/HeaderTitle'
+import Nav from '../nav/Nav'
 
 const Home = () => {
   return (
     <>
-    <Nav/>
+   <header>
+   <Nav/>
+    <HeaderTitle/>
+   </header>
+   <main>
+    <About/>
+   </main>
     </>
   )
 }

@@ -9,7 +9,7 @@ const Nav = () => {
         <ul className=''>
             <li>Bio</li>
             <li>Projects</li>
-            <li>Reposetories</li>
+            <li>Repositories</li>
             <li>Tech-Stack</li>
         </ul>
         </div>
