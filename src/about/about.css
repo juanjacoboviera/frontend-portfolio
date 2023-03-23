@@ -29,3 +29,19 @@
     font-size: 32px;
     margin: 10px 10px 0 10px;
 }
+
+.speciality-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 50px 0;
+}
+
+.speciality-container p {
+    margin-top: 10px;
+}
+
+.skills-container{
+    display: flex;
+    flex-direction: row;
+   align-items: center;
+}

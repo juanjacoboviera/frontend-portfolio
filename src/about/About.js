@@ -1,7 +1,9 @@
 import React from 'react'
 import juandev from '../assets/front-end-dev2.jpg'
+import Skill from '../skill/Skill'
 import './about.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEdit, faSearch, faArrowRightLong } from '@fortawesome/free-solid-svg-icons'
 import { faLinkedin, faGithub, faDiscord } from '@fortawesome/free-brands-svg-icons'
 const About = () => {
   return (
@@ -21,7 +23,16 @@ const About = () => {
             <FontAwesomeIcon icon={faDiscord} className='socialMedia-icons'/>
            </div>
         </div>
-        <div className="specialty-container">
+        <div className="speciality-container">
+            <div className="whatIdo-container">
+                <h3>What I do</h3>
+                <p>I work with HTML5, CSS, JavaScript and React.JS. These technologies enable me to craft dynamic user experiences through proper web development, ensuring that each project meets the highest standards.</p>
+            </div>
+            <div className="skills-container">
+                <Skill icon={faEdit} title="Web Development" description="You will receive a customized plan for your fitness journey, and lots of support" />
+                <Skill icon={faSearch} title="Ux Research" description="You will receive a customized plan for your fitness journey, and lots of support" />
+                <FontAwesomeIcon icon={faArrowRightLong} className='socialMedia-icons'/>
+            </div>
         </div>
     </div>
   )
