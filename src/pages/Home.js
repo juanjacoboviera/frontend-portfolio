@@ -3,6 +3,7 @@ import About from '../about/About'
 import HeaderTitle from '../headerTitle/HeaderTitle'
 import Nav from '../nav/Nav'
 import Projects from '../projects/Projects'
+import Repo from '../repo/Repo'
 import SeeMoreBtn from '../seeMoreBtn/SeeMoreBtn'
 
 const Home = () => {
@@ -20,6 +21,16 @@ const Home = () => {
         <Projects/>
         <SeeMoreBtn/>
       </div>
+    <section className='repos-section'>
+      <h2>My Repositories</h2>
+      <div className="repos-container">
+        <Repo/>
+        <Repo/>
+        <Repo/>
+        <Repo/>
+        <SeeMoreBtn/>
+      </div>
+    </section>
 
    </main>
     </>
