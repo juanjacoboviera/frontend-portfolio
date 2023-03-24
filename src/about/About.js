@@ -10,7 +10,9 @@ const About = () => {
     <div className='about-container'>
         <div className="bio-container">
                 <div className="bio-data__container">
+                <div className="img-background">
                 <img className='profile-pic' src={juandev} width="155px" height='155px' alt="" />
+                </div>
            <div className="bio-text">
                 <h3>Biography</h3>
                 <p>I am deeply passionate about design, technology, and marketing. To me, these three fields are like puzzle pieces that fit together perfectly, creating something truly remarkable when combined.</p>

@@ -1,0 +1,20 @@
+
+
+.project-container{
+    margin: 20px 0 40px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.project-details{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    margin-left: 15px;
+}
+
+.project-details * {
+    margin: 10px 0;
+}
