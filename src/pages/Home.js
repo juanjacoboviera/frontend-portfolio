@@ -5,6 +5,7 @@ import Nav from '../nav/Nav'
 import Projects from '../projects/Projects'
 import Repo from '../repo/Repo'
 import SeeMoreBtn from '../seeMoreBtn/SeeMoreBtn'
+import Footer from '../footer/Footer'
 
 const Home = () => {
   return (
@@ -31,8 +32,8 @@ const Home = () => {
         <SeeMoreBtn/>
       </div>
     </section>
-
    </main>
+   <Footer/>
     </>
   )
 }

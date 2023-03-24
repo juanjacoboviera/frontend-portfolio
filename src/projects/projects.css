@@ -6,6 +6,16 @@
     grid-template-columns: 1fr 1fr;
 }
 
+.project-thumbnail-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 555px;
+    height: 282px;
+    background-color: #323443;
+}
+
 .project-details{
 
     display: flex;
@@ -17,4 +27,12 @@
 
 .project-details * {
     margin: 10px 0;
+}
+
+.projectLink-btn{
+    justify-self: flex-start;
+    align-self: self-end;
+    color: white; 
+    font-size: 32px;
+    margin: 10px 10px 0 10px;
 }

@@ -1,10 +1,17 @@
 import React from 'react'
 import "./projects.css"
-import Img from '../assets/project.jpg'
+import thumbnail from '../assets/thumbnail.jpg'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
+
 const projects = () => {
   return (
         <div className="project-container">
-            <img src={Img} alt="" />
+        <div className="project-thumbnail-container">
+        <FontAwesomeIcon icon={faArrowUpRightFromSquare} className='projectLink-btn'/>
+            <img src={thumbnail} max-width='443px' height='170px' alt="" />
+
+        </div>
         <div className="project-details">
             <h4>Web Development</h4>
             <h2>Bolder Landing Page</h2>
