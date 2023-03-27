@@ -4,21 +4,20 @@ import reactLogo from '../assets/reactjs.svg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar} from '@fortawesome/free-solid-svg-icons'
 
-const Repo = () => {
+const Repo = ({repo}) => {
   return (
     <div className="repo-card">
         <div className="repo-description">
-            <h3>Nextjs Starter</h3>
-            <p>A dead simple for nextjs project.</p>
+            <h3>{repo.title}</h3>
+            <p>{repo.description}</p>
         </div>
         <div className="repo-info">
             <div className="repo-techStack">
-                <img src={reactLogo} alt="" width='60px' height='60px' />
-                <img src={reactLogo} alt="" width='60px' height='60px' />
+                {repo && repo.techStack.map(tech => <img src={tech.icon} alt="" width='60px' height='60px' />) }
             </div>
             <div className="repo-rating">
                 <FontAwesomeIcon icon={faStar} style={{color: '#FFF615', fontSize: '1.3em', paddingRight: '10px'}}/>
-                <p>1 Star</p>
+                <p>{repo.rating}</p>
             </div>   
         </div>
     </div>

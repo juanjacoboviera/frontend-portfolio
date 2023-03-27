@@ -2,7 +2,7 @@ import React from 'react'
 import './skill.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 const Skill = ({icon, title, description}) => {
-    console.log(icon)
+  
   return (
     <div className='skill-card'>
         <div className="iconBackground">

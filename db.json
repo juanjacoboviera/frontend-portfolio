@@ -1,0 +1,56 @@
+{
+    "Juan Jacobo Viera": [
+      {
+        "about": {
+            "img": "https://lh4.googleusercontent.com/rTbT3gPp3RG94bxAwVEbsgCGd8BH9U4vBEk4hF23BfjKXiABoQt2Zk1WmSDYaG_G8xc=w2400",
+            "bio": "I am deeply passionate about design, technology, and marketing. To me, these three fields are like puzzle pieces that fit together perfectly, creating something truly remarkable when combined.",
+            "whatIDo": "I work with HTML5, CSS, JavaScript and React.JS. These technologies enable me to craft dynamic user experiences through proper web development, ensuring that each project meets the highest standards.",
+            "skills": [
+                {"title": "Web Development", "description": "I build websites and web applications using programming languages and web development frameworks to create functional online experiences.", "icon": "fa-edit"}, 
+                {"title": "UI Design", "description": " I design interfaces for websites and applications that are both visually appealing and easy to use.", "icon": "fa-edit"},
+                {"title": "Product Design", "description": " I design and develop products that solve problems and enhance user experiences.", "icon": "fa-edit"}
+            ],
+            "socialMedia":{
+                "linkedin": "https://www.linkedin.com/in/juanjacoboviera-frontenddev/",
+                "github": "https://github.com/juanjacoboviera",
+                "discord": "https://discordapp.com/users/Jacobo#6974"
+        }
+        },
+        "projects": [
+            {"link": "https://lablab.ai/event/openai-hackathon/omni/briefo", "type": "Web Application","title": "Briefo: The Creative Assistant", "description": "Submit a paragraph, receive a brief, revise, and save. It's really that simple. 2023 OpenAI Stack Hack submission.", "img": "https://photos.google.com/album/AF1QipOlo9eu_Gs6CO649w7jkjA5TWJkh1oZY5EZfxD7/photo/AF1QipMKzEv5vYeeDePncoT3nH6YXYMPNvafVwX5ZLkE", "techStack": [{"reactIcon": " https://svgshare.com/i/rV0.svg", "flaskIcon":"https://svgshare.com/i/rUf.svg", "GPT3":"https://svgshare.com/i/rV1.svg" }] }, 
+            {"link": "https://workforce-manager-q16o62yay-juanjacoboviera.vercel.app/", "type": "Web Application", "title": "Work-Force Manager", "description": "Maximize your team's potential with real-time task oversight.", "img": "https://photos.google.com/album/AF1QipOlo9eu_Gs6CO649w7jkjA5TWJkh1oZY5EZfxD7/photo/AF1QipNrzwOdYWyuzACoN7DdEx5XiWQ5Yi2ZVPqoYY4o", "techStack": [{"reactIcon": "https://svgshare.com/i/rV0.svg"}]},
+            {"link": "https://juanjacoboviera.github.io/Pineapp-the-budget-app/", "type": "Web Application", "title": "Pineapp The Budget App", "description": "Pineapp helps track spending and categorize expenses so you can see where your money is going.", "img": "https://drive.google.com/file/d/1d43UXWEBYprlnBtkAYgwkmgmCPi65ZCX/view?usp=sharing", "techStack": [{"htmlIcon": "https://svgshare.com/i/rUe.svg", "cssIcon":"https://svgshare.com/i/rTn.svg", "javascriptIcon":"https://svgshare.com/i/rTX.svg" }] },
+            {"link": "https://a-de-coco-e-commerce-1np50becd-juanjacoboviera.vercel.app/", "type": "E-Commerce", "title": "A de Coco", "description": "This is the frontend design and development for an e-commerce site that specializes in selling coconut-based products.", "img": "https://lh3.googleusercontent.com/HTSNgNBG-BMxvo4ujxhNqCYNWgPJnHp5wcl219G4QdKEkl9bPpdDGXfjhjiFVhHOzjSDbVKtH_4sw4w_tsP-w_q72-3jKT0maySYvM6Y7AMdOYnHrq5j7OaZx54WmaJBFLdWMFQv_YK_3F3EeQ5BgodsEq2JuTF2sU3jgt9doUnVQ5lkgdkc_WWjQdHZx2YXwf0b7NagYQ1uWnndiPEJWbaSm66sHf-5TnjAsd2U1A8CHCzf9I9MKi3QtpZXVFoY1I5iOLdMBDpaGldggvTNxUyCqXg8Drab_N3cWrqVHWKIj893cbRQkT1E0ULhDmUPRwk0WKsqBf1BfRAHwUOrTXEQ3OpDbOFXX5NOpXpJpJOKc1x8tLMgdR_YrNuaFU8plxAjc7mJdG3gpe-UCgH36ROEHiKEcBohBv9VIEIIXk4kY7RAeEMbTlqQ7adhdrhCLcKg07zMuFUlrKC7OMnsD0RXdDTf3KwdidYzHte2fAeEObhQwsdBRALHFt3suw14Vil6U02LN6bqZtkOAQeHGeYvdBuidNIBFSpPDS5W2nIaBQavamGEcyMsdwVz-XtIWNjchhdxPDhynlO9jM98VThIW6IhNNq2euqvP0Khgjqa1prsbs9iRQmwYO7pgdkq-VhGENMMXFtgZ213i7aw_LZi0kqilZiyK2PTc0PbFeUEbBtuprdUBqAMTJKrH3c3z5ndF_2Ib68E7RjjUh54Pn6G5Xj99D-PU8S1a9P5TDrucIWNcoP6-Hf-41uZ_9wEDcsk92MFPFSA5s1AatrB36fE3U0OWWBRFeoiwgsS01JGUxLVT6bnWzSN2wSpMwE58YwhGLrTPCi9rllPvqsIxMeHkKAEWLWCJyM7NgvNbJAXM5ehrmMx7amGC_9ew4sDio0WneXYtK2-cPNVjiVMXguo4mphABIOFhATnb0d1m4yT2Fk=w898-h350-no?authuser=0","techStack": [{"reactIcon": "https://svgshare.com/i/rV0.svg", "fireBase":"https://svgshare.com/i/rTp.svg" }] },
+            {"link": "https://juanjacoboviera.github.io/e-commerce-lu/", "type": "E-Commerce", "title": "Lu Postres y Tortas", "description": "This is the frontend design and development for an e-commerce website that sells cakes, desserts, and brownies.", "img": "https://photos.google.com/album/AF1QipOlo9eu_Gs6CO649w7jkjA5TWJkh1oZY5EZfxD7/photo/AF1QipN1qqTZymU0qh9QuIL155vgT4dlqjT1BUYkuV-K", "techStack": [{"htmlIcon": "https://svgshare.com/i/rUe.svg", "cssIcon":"https://svgshare.com/i/rTn.svg", "javascriptIcon":"https://svgshare.com/i/rTX.svg" }]},
+            {"link": "https://juanjacoboviera.github.io/MKcharacters/", "type": "Just For Fun", "title": "MK Character Selection Screen", "description": "Character selection screen with vintage Mortal Kombat theme design", "img": "https://photos.google.com/album/AF1QipOlo9eu_Gs6CO649w7jkjA5TWJkh1oZY5EZfxD7/photo/AF1QipNC_Ghl5CgrZzBUAHckBcBzKOF-ptu88oAjWoVT", "techStack": [{"htmlIcon": "https://svgshare.com/i/rUe.svg", "cssIcon":"https://svgshare.com/i/rTn.svg", "javascriptIcon":"https://svgshare.com/i/rTX.svg" }]}
+        ],
+        "Repos":[
+            {"link": "https://github.com/juanjacoboviera/workforce-manager", "title": "Workforce-manager", "description": "Maximize your team's potential with real-time task oversight.", "techStack": [{"reactIcon": "https://svgshare.com/i/rV0.svg"}], "rating": "1 star"},
+            {"link": "https://github.com/juanjacoboviera/Pineapp-the-budget-app", "title": "Pineapp-the-budget-app", "description": "Pineapp helps track spending and categorize expenses so you can see where your money is going.", "techStack": [{"htmlIcon": "https://svgshare.com/i/rUe.svg", "cssIcon":"https://svgshare.com/i/rTn.svg", "javascriptIcon":"https://svgshare.com/i/rTX.svg" }], "rating": "1 star"},
+            {"link": "https://github.com/gaelzarco/ai-creative-assistant", "title": "Briefo: AI-creative-assistant", "description": "Submit a paragraph, receive a brief, revise, and save.", "techStack": [{"reactIcon": "https://svgshare.com/i/rV0.svg", "flask":"https://svgshare.com/i/rUf.svg", "GPT3":"https://svgshare.com/i/rV1.svg"}], "rating": "3 star"},
+            {"link": "https://github.com/juanjacoboviera/A-de-Coco-E-Commerce", "title": "A-de-Coco-E-Commerce", "description": "E-Commerce clone of the brand A de Coco", "techStack": [{"reactIcon": "https://svgshare.com/i/rV0.svg", "firebaseIcon":"https://svgshare.com/i/rTp.svg"}], "rating": "1 star"},
+            {"link": "https://github.com/juanjacoboviera/e-commerce-lu", "title": "e-commerce-lu", "description": "E-Commerce frontend Mock up", "techStack": [{"htmlIcon": "https://svgshare.com/i/rUe.svg", "cssIcon":"https://svgshare.com/i/rTn.svg", "javascriptIcon":"https://svgshare.com/i/rTX.svg"}], "rating": "1 star" },
+            {"link": "https://github.com/juanjacoboviera/MKcharacters", "title": "MKcharacters", "description": "Character selector screen with vintage Mortal Kombat theme design", "techStack": [{"htmlIcon": "https://svgshare.com/i/rUe.svg", "cssIcon":"https://svgshare.com/i/rTn.svg", "javascriptIcon":"https://svgshare.com/i/rTX.svg" }], "rating": "1 star"}
+
+        ],
+        "techStack": {
+            "html": "https://svgshare.com/i/rUe.svg",
+            "css": "https://svgshare.com/i/rTn.svg",
+            "js": "https://svgshare.com/i/rTX.svg",
+            "reactjs": "https://svgshare.com/i/rV0.svg",
+            "figma": "https://svgshare.com/i/rTo.svg",
+            "psd": "https://svgshare.com/i/rUN.svg",
+            "ai": "https://svgshare.com/i/rSw.svg",
+            "bootstrap": "https://svgshare.com/i/rUp.svg",
+            "json": "https://svgshare.com/i/rTc.svg",
+            "npm": "https://svgshare.com/i/rUM.svg",
+            "firebase": "https://svgshare.com/i/rTp.svg",
+            "git": "https://svgshare.com/i/rU8.svg",
+            "github": "https://svgshare.com/i/rUq.svg",
+            "vscode": "https://svgshare.com/i/rUr.svg",
+            "openai": "https://svgshare.com/i/rV1.svg"
+        }
+        
+      } 
+    ]
+  }

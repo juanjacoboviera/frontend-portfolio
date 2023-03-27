@@ -11,7 +11,7 @@
     flex-direction: column;
     justify-content: space-between;
     max-width: 556px;
-    height: 282px;
+    min-height: 282px;
     background-color: #323443;
     border-radius: 20px;
     padding: 30px 40px 5px 40px;

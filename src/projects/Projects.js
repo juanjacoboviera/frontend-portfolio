@@ -4,18 +4,18 @@ import thumbnail from '../assets/thumbnail.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 
-const projects = () => {
+const projects = ({project}) => {
   return (
         <div className="project-container">
         <div className="project-thumbnail-container">
         <FontAwesomeIcon icon={faArrowUpRightFromSquare} className='projectLink-btn'/>
-            <img src={thumbnail} max-width='443px' height='170px' alt="" />
+            <img src={project && project.img} max-width='443px' height='170px' alt="project thumbnail" />
 
         </div>
         <div className="project-details">
-            <h4>Web Development</h4>
-            <h2>Bolder Landing Page</h2>
-            <p>Serrow restructured and designed core pages, creating interactive elements that put users in control and allowed them to discover the information needed to make a decision.</p>
+            <h4>{project && project.type}</h4>
+            <h2>{project && project.title}</h2>
+            <p>{project && project.description}</p>
         </div>
         </div>
   )

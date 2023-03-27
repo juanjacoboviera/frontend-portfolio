@@ -5,17 +5,17 @@ import './about.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEdit, faSearch, faArrowRightLong } from '@fortawesome/free-solid-svg-icons'
 import { faLinkedin, faGithub, faDiscord } from '@fortawesome/free-brands-svg-icons'
-const About = () => {
+const About = ({about}) => {
   return (
     <div className='about-container'>
         <div className="bio-container">
                 <div className="bio-data__container">
                 <div className="img-background">
-                <img className='profile-pic' src={juandev} width="155px" height='155px' alt="" />
+                <img className='profile-pic' src={about && about.img} width="155px" height='155px' alt="" />
                 </div>
            <div className="bio-text">
                 <h3>Biography</h3>
-                <p>I am deeply passionate about design, technology, and marketing. To me, these three fields are like puzzle pieces that fit together perfectly, creating something truly remarkable when combined.</p>
+                <p>{about && about.bio}</p>
            </div>
            </div>
            <div className="contact-data">
@@ -28,7 +28,7 @@ const About = () => {
         <div className="speciality-container">
             <div className="whatIdo-container">
                 <h3>What I do</h3>
-                <p>I work with HTML5, CSS, JavaScript and React.JS. These technologies enable me to craft dynamic user experiences through proper web development, ensuring that each project meets the highest standards.</p>
+                <p>{about && about.whatIDo}</p>
             </div>
             <div className="skills-container">
                 <Skill icon={faEdit} title="Web Development" description="You will receive a customized plan for your fitness journey, and lots of support" />
