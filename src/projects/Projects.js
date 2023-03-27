@@ -3,10 +3,11 @@ import "./projects.css"
 import thumbnail from '../assets/thumbnail.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-router-dom'
 
 const projects = ({project}) => {
   return (
-        <div className="project-container">
+        <Link target='blank' to={project && project.link}><div className="project-container">
         <div className="project-thumbnail-container">
         <FontAwesomeIcon icon={faArrowUpRightFromSquare} className='projectLink-btn'/>
             <img src={project && project.img} max-width='443px' height='170px' alt="project thumbnail" />
@@ -17,7 +18,7 @@ const projects = ({project}) => {
             <h2>{project && project.title}</h2>
             <p>{project && project.description}</p>
         </div>
-        </div>
+        </div></Link>
   )
 }
 

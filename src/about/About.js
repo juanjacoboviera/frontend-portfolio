@@ -5,6 +5,7 @@ import './about.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEdit, faSearch, faArrowRightLong } from '@fortawesome/free-solid-svg-icons'
 import { faLinkedin, faGithub, faDiscord } from '@fortawesome/free-brands-svg-icons'
+import { Link } from 'react-router-dom'
 const About = ({about}) => {
   return (
     <div className='about-container'>
@@ -20,9 +21,9 @@ const About = ({about}) => {
            </div>
            <div className="contact-data">
             <h3>Lets connect</h3>
-            <FontAwesomeIcon icon={faLinkedin} className='socialMedia-icons'/>
-            <FontAwesomeIcon icon={faGithub} className='socialMedia-icons'/>
-            <FontAwesomeIcon icon={faDiscord} className='socialMedia-icons'/>
+            <Link  target="blank" to={about && about.socialMedia.linkedin}><FontAwesomeIcon icon={faLinkedin} className='socialMedia-icons'/></Link>
+            <Link target="blank" to={about && about.socialMedia.github}><FontAwesomeIcon icon={faGithub} className='socialMedia-icons'/></Link>
+            <Link target="blank" to={about && about.socialMedia.discord}><FontAwesomeIcon icon={faDiscord} className='socialMedia-icons'/></Link>
            </div>
         </div>
         <div className="speciality-container">

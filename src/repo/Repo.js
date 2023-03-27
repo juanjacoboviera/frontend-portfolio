@@ -3,10 +3,11 @@ import './repo.css'
 import reactLogo from '../assets/reactjs.svg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar} from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-router-dom'
 
 const Repo = ({repo}) => {
   return (
-    <div className="repo-card">
+    <Link target='blank' to={repo.link}><div className="repo-card">
         <div className="repo-description">
             <h3>{repo.title}</h3>
             <p>{repo.description}</p>
@@ -21,6 +22,7 @@ const Repo = ({repo}) => {
             </div>   
         </div>
     </div>
+    </Link>
   )
 }
 
