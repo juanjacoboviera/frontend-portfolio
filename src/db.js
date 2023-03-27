@@ -36,7 +36,7 @@
         techStack: [{logo: "https://svgshare.com/i/rUe.svg", title:'html'},
             {logo: "https://svgshare.com/i/rTn.svg", title: 'css'},
             {logo: "https://svgshare.com/i/rTX.svg", title: 'js'},
-            {logo: "https://svgshare.com/i/rV0.svg",title: 'reactjs' },
+            {logo: "https://raw.githubusercontent.com/juanjacoboviera/frontend-portfolio/0086d10861acd7ae3ff63f7977f1ce913ee82c16/src/assets/reactjs.svg",title: 'reactjs' },
             {logo: "https://svgshare.com/i/rTo.svg", title: 'figma'} ,
             {logo: "https://svgshare.com/i/rUN.svg", title: 'psd'},
             {logo: "https://svgshare.com/i/rSw.svg", title: 'ai'},
