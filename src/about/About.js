@@ -6,7 +6,46 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEdit, faSearch, faArrowRightLong } from '@fortawesome/free-solid-svg-icons'
 import { faLinkedin, faGithub, faDiscord } from '@fortawesome/free-brands-svg-icons'
 import { Link } from 'react-router-dom'
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+
+
 const About = ({about}) => {
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 2,
+          infinite: true,
+          dots: false
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 2,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 2
+        }
+      }
+    ]
+  };
   return (
     <div className='about-container'>
         <div className="bio-container">
@@ -32,9 +71,12 @@ const About = ({about}) => {
                 <p>{about && about.whatIDo}</p>
             </div>
             <div className="skills-container">
-                <Skill icon={faEdit} title="Web Development" description="You will receive a customized plan for your fitness journey, and lots of support" />
-                <Skill icon={faSearch} title="Ux Research" description="You will receive a customized plan for your fitness journey, and lots of support" />
-                <FontAwesomeIcon icon={faArrowRightLong} className='socialMedia-icons'/>
+            <Slider {...settings}>
+                {about && about.skills.map(skill => <Skill icon={faEdit} title={skill.title} description={skill.description} /> )}
+                {/* <Skill icon={faEdit} title="Web Development" description="You will receive a customized plan for your fitness journey, and lots of support" />
+                <Skill icon={faSearch} title="Ux Research" description="You will receive a customized plan for your fitness journey, and lots of support" /> */}
+                </Slider>
+                {/* <FontAwesomeIcon icon={faArrowRightLong} className='socialMedia-icons'/> */}
             </div>
         </div>
     </div>

@@ -9,6 +9,7 @@ import Footer from '../footer/Footer'
 import { getProfileData, addCollectionAndDocuments } from '../utils/firebase/firebase.utils'
 
 
+
 const Home = () => {
 const [profileData, setProfileData] = useState({});
 const [moreProjectsBtn, setMoreProjectsBtn] = useState(false);

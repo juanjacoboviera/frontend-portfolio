@@ -46,7 +46,7 @@
 
 .speciality-container{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 50% 50%;
     padding: 70px 0;
 }
 
@@ -54,8 +54,27 @@
     margin-top: 10px;
 }
 
-.skills-container{
+.whatIdo-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* .skills-container{
     display: flex;
     flex-direction: row;
    align-items: center;
+}  */
+
+
+.slick-track {
+    top: 31px !important;
+}
+
+.slick-list{
+    height: 225px;
+}
+
+.slick-prev:before{
+    content: none !important;
 }

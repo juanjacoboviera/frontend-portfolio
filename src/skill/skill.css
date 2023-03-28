@@ -4,18 +4,18 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 262px;
+    width: auto;
     height: 190px;
     background-color: #323443;
     border-radius: 12px;
     padding: 0 10px;
-    margin: 0 10px;
+    margin: 0 20px;
 }
 
 .iconBackground{
     position: absolute;
     top: -30px;
-    right: 95px;
+    right: 35%;
    display: flex;
    justify-content: center;
    align-items: center;
