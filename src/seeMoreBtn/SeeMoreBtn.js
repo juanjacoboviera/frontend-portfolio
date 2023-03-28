@@ -3,9 +3,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faNavicon } from '@fortawesome/free-solid-svg-icons'
 import './seeMoreBtn.css'
 
-const SeeMoreBtn = () => {
+const SeeMoreBtn = ({onClick, title}) => {
   return (
-    <button className='seeMore-btn'><FontAwesomeIcon icon={faNavicon}/> See More</button>
+    <button onClick={onClick} className='seeMore-btn'><FontAwesomeIcon icon={faNavicon}/>{title}</button>
   )
 }
 

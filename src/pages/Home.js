@@ -10,7 +10,11 @@ import { getProfileData, addCollectionAndDocuments } from '../utils/firebase/fir
 
 
 const Home = () => {
-const [profileData, setProfileData] = useState({})
+const [profileData, setProfileData] = useState({});
+const [moreProjectsBtn, setMoreProjectsBtn] = useState(false);
+const [moreReposBtn, setMoreReposBtn] = useState(false);
+const {about, Repos, techStack, projects} = profileData
+
 useEffect(()=>{
   const getProfileMap = async () =>{
     const profileData = await getProfileData();
@@ -20,8 +24,21 @@ useEffect(()=>{
    getProfileMap()
 },[])
 
-const {about, Repos, techStack, projects} = profileData
-console.log(profileData)
+const spliceArray = (array, index, numberElements) =>{
+  const originalArray =  array ? [...array] : [];
+  originalArray.splice(index, numberElements);
+  return originalArray;
+}
+
+const showThreeProjects = spliceArray(projects,3,3);
+const showFourRepos = spliceArray(Repos,4,2);
+
+
+const seeMoreSwitch = (switchType) => {
+  switchType((prev) => !prev)
+}
+
+
   return (
     <>
    <header>
@@ -33,16 +50,14 @@ console.log(profileData)
     <About about={about}/>
     <div className='projects-section'>
         <h2>Featured Projects</h2>
-        {projects && projects.map(project => <Projects project={project}/> )}
-        {/* <Projects/>
-        <Projects/> */}
-        <SeeMoreBtn/>
+        {moreProjectsBtn ?  projects.map(project => <Projects project={project}/> ) : showThreeProjects.map(project => <Projects project={project}/> )}
+        <SeeMoreBtn onClick={() => {seeMoreSwitch(setMoreProjectsBtn)}} title={moreProjectsBtn ? 'See Less' : 'See More'}/>
       </div>
     <section className='repos-section'>
       <h2>My Repositories</h2>
       <div className="repos-container">
-        {Repos && Repos.map(repo =>  <Repo repo={repo}/> )}
-        <SeeMoreBtn/>
+      {moreProjectsBtn ?  Repos.map(repo => <Repo repo={repo}/> ) : showFourRepos.map(repo => <Repo repo={repo}/> )}
+        <SeeMoreBtn onClick={() => {seeMoreSwitch(setMoreProjectsBtn)}} title={moreProjectsBtn ? 'See Less' : 'See More'}/>
       </div>
     </section>
    </main>
