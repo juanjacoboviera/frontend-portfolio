@@ -49,17 +49,19 @@ const seeMoreSwitch = (switchType) => {
    </header>
    <main>
     <About about={about}/>
-    <div className='projects-section'>
+    <section className='projects-section'>
         <h2>Featured Projects</h2>
-        {moreProjectsBtn ?  projects.map(project => <Projects project={project}/> ) : showThreeProjects.map(project => <Projects project={project}/> )}
+        <div className={`projects-container ${moreProjectsBtn ? 'showAll-projects' : ''}`}>
+        {projects?.map(project => <Projects project={project}/> )}
+        </div>
         <SeeMoreBtn onClick={() => {seeMoreSwitch(setMoreProjectsBtn)}} title={moreProjectsBtn ? 'See Less' : 'See More'}/>
-      </div>
+      </section>
     <section className='repos-section'>
       <h2>My Repositories</h2>
-      <div className="repos-container">
-      {moreProjectsBtn ?  Repos.map(repo => <Repo repo={repo}/> ) : showFourRepos.map(repo => <Repo repo={repo}/> )}
-        <SeeMoreBtn onClick={() => {seeMoreSwitch(setMoreProjectsBtn)}} title={moreProjectsBtn ? 'See Less' : 'See More'}/>
+      <div className={`repos-container ${moreReposBtn ? 'showAll-repos' : ''}`}>
+      {Repos?.map(repo => <Repo repo={repo}/> )}
       </div>
+        <SeeMoreBtn onClick={() => {seeMoreSwitch(setMoreReposBtn)}} title={moreReposBtn ? 'See Less' : 'See More'}/>
     </section>
    </main>
    <Footer techstack={techStack}/>

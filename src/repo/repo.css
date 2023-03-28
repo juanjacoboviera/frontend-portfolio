@@ -1,9 +1,16 @@
 
+.repos-section{
+    padding-bottom: 70px;
+}
+
 .repos-container{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
     margin: 34px 0;
+    max-height: 615px;
+    overflow: hidden;
+    transition: all 1s;
 }
 
 .repo-card{
@@ -39,3 +46,7 @@
     margin: 20px 0;
     color: white;
 }
+
+.showAll-repos{
+    max-height: 910px;
+   }
