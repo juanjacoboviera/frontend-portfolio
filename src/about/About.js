@@ -47,7 +47,7 @@ const About = ({about}) => {
     ]
   };
   return (
-    <div className='about-container'>
+    <div id='bio' className='about-container'>
         <div className="bio-container">
                 <div className="bio-data__container">
                 <div className="img-background">

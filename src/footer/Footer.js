@@ -4,7 +4,7 @@ import reactLogo from '../assets/reactjs.svg'
 
 const Footer = ({techstack}) => {
   return (
-    <footer>
+    <footer id='tech-stack'>
         <h2 className='tech-stack-title'>My Tech-Stack</h2>
         <div className="logos-container">
             <div className="tech-logos">

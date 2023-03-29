@@ -50,3 +50,31 @@
 .showAll-repos{
     max-height: 910px;
    }
+
+/* MEDIA QUERIES */
+
+   @media screen and (min-width: 320px) and (max-width: 479px) {
+    .repos-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .repo-card{
+        /* min-height:351px; */
+    }
+
+   }
+   
+   @media screen and (min-width: 480px) and (max-width: 767px) {
+    .repos-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .repo-card{
+        /* min-height:351px; */
+    }
+    
+   }
+   
+   @media screen and (min-width: 768px) and (max-width: 1200px) {
+       
+   }

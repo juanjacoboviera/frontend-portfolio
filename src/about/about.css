@@ -78,3 +78,59 @@
 .slick-prev:before{
     content: none !important;
 }
+
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width: 320px) and (max-width: 479px) {
+    .bio-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bio-data__container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .bio-text  {
+        align-items: center;
+    }
+
+    .contact-data h3{
+        display: none;
+    }
+ }
+ 
+ @media screen and (min-width: 480px) and (max-width: 767px) {
+    .bio-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bio-data__container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 15px 0;
+    }
+
+    .bio-text  {
+        text-align: center;
+        align-items: center;
+        margin: 10px 0;
+    }
+
+    .contact-data h3{
+        display: none;
+    }
+ }
+ 
+ @media screen and (min-width: 768px) and (max-width: 1200px) {
+     
+ }

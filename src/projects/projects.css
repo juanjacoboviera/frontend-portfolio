@@ -54,3 +54,47 @@ a{
 .showAll-projects{
  max-height: 2100px;
 }
+
+
+@media screen and (min-width: 320px) and (max-width: 479px) {
+    .bio-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bio-data__container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .bio-text  {
+        align-items: center;
+    }
+
+    .contact-data h3{
+        display: none;
+    }
+ }
+ 
+ /* MEDIA QUERIES */
+
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  .project{
+    display: flex;
+    flex-direction: column;
+  }
+ }
+ 
+ @media screen and (min-width: 480px) and (max-width: 880px) {
+    .project{
+        display: flex;
+        flex-direction: column;
+      }
+ }
+ 
+ @media screen and (min-width: 768px) and (max-width: 1200px) {
+     
+ }
