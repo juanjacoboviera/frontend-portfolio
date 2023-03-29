@@ -15,6 +15,8 @@ const [profileData, setProfileData] = useState({});
 const [moreProjectsBtn, setMoreProjectsBtn] = useState(false);
 const [moreReposBtn, setMoreReposBtn] = useState(false);
 const {about, Repos, techStack, projects} = profileData
+const [minHeight, setMinHeight] = useState(0);
+
 
 useEffect(()=>{
   const getProfileMap = async () =>{
@@ -25,20 +27,34 @@ useEffect(()=>{
    getProfileMap()
 },[])
 
-const spliceArray = (array, index, numberElements) =>{
-  const originalArray =  array ? [...array] : [];
-  originalArray.splice(index, numberElements);
-  return originalArray;
-}
 
-const showThreeProjects = spliceArray(projects,3,3);
-const showFourRepos = spliceArray(Repos,4,2);
+useEffect(() => {
+  function handleResize() {
+    // Set max height based on window size
+   if (window.innerWidth <= 889 ) {
+    const repoCardHeight = 357; 
+    setMinHeight(repoCardHeight);
+    // console.log(maxHeight)
+   }
+   if (window.innerWidth > 889 ) {
+    const repoCardHeight = 0; 
+    setMinHeight(repoCardHeight);
+   }
+   
+  }
+  // console.log(maxHeight)
+   
+  // Add event listener for window resize
+  window.addEventListener('resize', handleResize);
 
+
+  // Remove event listener on component unmount
+  return () => window.removeEventListener('resize', handleResize);
+}, [minHeight]);
 
 const seeMoreSwitch = (switchType) => {
   switchType((prev) => !prev)
 }
-
 
   return (
     <>
@@ -59,7 +75,7 @@ const seeMoreSwitch = (switchType) => {
     <section id='repositories' className='repos-section'>
       <h2>My Repositories</h2>
       <div className={`repos-container ${moreReposBtn ? 'showAll-repos' : ''}`}>
-      {Repos?.map(repo => <Repo repo={repo}/> )}
+      {Repos?.map(repo => <Repo repo={repo} minHeight={minHeight}/> )}
       </div>
         <SeeMoreBtn onClick={() => {seeMoreSwitch(setMoreReposBtn)}} title={moreReposBtn ? 'See Less' : 'See More'}/>
     </section>

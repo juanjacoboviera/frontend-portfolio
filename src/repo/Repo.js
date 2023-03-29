@@ -5,9 +5,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar} from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
 
-const Repo = ({repo}) => {
+const Repo = ({repo, minHeight}) => {
   return (
-    <Link target='blank' to={repo.link}><div className="repo-card">
+    <Link target='blank' to={repo.link}><div className="repo-card" style={{ 'minHeight': minHeight > 0 ? `${minHeight}px` : undefined }}>
         <div className="repo-description">
             <h3>{repo.title}</h3>
             <p>{repo.description}</p>
