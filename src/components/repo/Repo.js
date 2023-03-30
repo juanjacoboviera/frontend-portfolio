@@ -1,6 +1,5 @@
 import React from 'react'
 import './repo.css'
-import reactLogo from '../assets/reactjs.svg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar} from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'

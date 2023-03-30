@@ -1,13 +1,14 @@
 import React, {useEffect, useState} from 'react'
-import About from '../about/About'
-import HeaderTitle from '../headerTitle/HeaderTitle'
-import Nav from '../nav/Nav'
-import Projects from '../projects/Projects'
-import Repo from '../repo/Repo'
-import SeeMoreBtn from '../seeMoreBtn/SeeMoreBtn'
-import Footer from '../footer/Footer'
+import About from '../components/about/About'
+import HeaderTitle from '../components/headerTitle/HeaderTitle'
+import Nav from '../components/nav/Nav'
+import Projects from '../components/projects/Projects'
+import Repo from '../components/repo/Repo'
+import SeeMoreBtn from '../components/seeMoreBtn/SeeMoreBtn'
+import Footer from '../components/footer/Footer'
 import { getProfileData, addCollectionAndDocuments } from '../utils/firebase/firebase.utils'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faNavicon ,faArrowTurnUp } from '@fortawesome/free-solid-svg-icons'
 
 
 const Home = () => {
@@ -34,7 +35,7 @@ useEffect(() => {
    if (window.innerWidth <= 889 ) {
     const repoCardHeight = 357; 
     setMinHeight(repoCardHeight);
-    // console.log(maxHeight)
+
    }
    if (window.innerWidth > 889 ) {
     const repoCardHeight = 0; 
@@ -42,11 +43,8 @@ useEffect(() => {
    }
    
   }
-  // console.log(maxHeight)
-   
   // Add event listener for window resize
   window.addEventListener('resize', handleResize);
-
 
   // Remove event listener on component unmount
   return () => window.removeEventListener('resize', handleResize);
@@ -70,14 +68,14 @@ const seeMoreSwitch = (switchType) => {
         <div className={`projects-container ${moreProjectsBtn ? 'showAll-projects' : ''}`}>
         {projects?.map(project => <Projects project={project}/> )}
         </div>
-        <SeeMoreBtn onClick={() => {seeMoreSwitch(setMoreProjectsBtn)}} title={moreProjectsBtn ? 'See Less' : 'See More'}/>
+        <SeeMoreBtn onClick={() => {seeMoreSwitch(setMoreProjectsBtn)}} title={moreProjectsBtn ? 'See Less' : 'See More'} iconName={faNavicon}/>
       </section>
     <section id='repositories' className='repos-section'>
       <h2>My Repositories</h2>
       <div className={`repos-container ${moreReposBtn ? 'showAll-repos' : ''}`}>
       {Repos?.map(repo => <Repo repo={repo} minHeight={minHeight}/> )}
       </div>
-        <SeeMoreBtn onClick={() => {seeMoreSwitch(setMoreReposBtn)}} title={moreReposBtn ? 'See Less' : 'See More'}/>
+        <SeeMoreBtn onClick={() => {seeMoreSwitch(setMoreReposBtn)}} title={moreReposBtn ? 'See Less' : 'See More'} iconName={faNavicon}/>
     </section>
    </main>
    <Footer techstack={techStack}/>

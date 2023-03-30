@@ -8,7 +8,7 @@ const Nav = () => {
   return (
    <nav className='navBar-container'>
         <div className='navBar'>
-        <h2 className='logo'>Juan Jacobo Viera</h2>
+        <h2 id='juanJacoboViera' className='logo'>Juan Jacobo Viera</h2>
         <ul className=''>
             <HashLink smooth to='#bio'><li>Bio</li></HashLink>
             <HashLink smooth to='#projects'><li>Projects</li></HashLink>

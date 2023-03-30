@@ -1,5 +1,5 @@
 import React from 'react'
-import juandev from '../assets/front-end-dev2.jpg'
+import juandev from '../../assets/front-end-dev2.jpg'
 import Skill from '../skill/Skill'
 import './about.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -15,7 +15,7 @@ const About = ({about}) => {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 500,
+    speed: 800,
     slidesToShow: 2,
     slidesToScroll: 1,
     initialSlide: 0,
@@ -24,7 +24,7 @@ const About = ({about}) => {
         breakpoint: 1024,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 2,
+          slidesToScroll: 1,
           infinite: true,
           dots: false
         }
@@ -33,15 +33,16 @@ const About = ({about}) => {
         breakpoint: 600,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 2,
-          initialSlide: 2
+          slidesToScroll: 1,
+          initialSlide: 1
         }
       },
       {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 2
+          slidesToScroll:1,
+          initialSlide: 1
         }
       }
     ]
@@ -49,20 +50,20 @@ const About = ({about}) => {
   return (
     <div id='bio' className='about-container'>
         <div className="bio-container">
-                <div className="bio-data__container">
-                <div className="img-background">
-                <img className='profile-pic' src={about && about.img} width="155px" height='155px' alt="" />
-                </div>
-           <div className="bio-text">
-                <h3>Biography</h3>
-                <p>{about && about.bio}</p>
-           </div>
+            <div className="bio-data__container">
+              <div className="img-background">
+                  <img className='profile-pic' src={about && about.img} width="155px" height='155px' alt="" />
+              </div>
+              <div className="bio-text">
+                    <h3>Biography</h3>
+                    <p>{about && about.bio}</p>
+              </div>
            </div>
            <div className="contact-data">
-            <h3>Lets connect</h3>
-            <Link  target="blank" to={about && about.socialMedia.linkedin}><FontAwesomeIcon icon={faLinkedin} className='socialMedia-icons'/></Link>
-            <Link target="blank" to={about && about.socialMedia.github}><FontAwesomeIcon icon={faGithub} className='socialMedia-icons'/></Link>
-            <Link target="blank" to={about && about.socialMedia.discord}><FontAwesomeIcon icon={faDiscord} className='socialMedia-icons'/></Link>
+              <h3>Lets connect</h3>
+              <Link  target="blank" to={about && about.socialMedia.linkedin}><FontAwesomeIcon icon={faLinkedin} className='socialMedia-icons'/></Link>
+              <Link target="blank" to={about && about.socialMedia.github}><FontAwesomeIcon icon={faGithub} className='socialMedia-icons'/></Link>
+              <Link target="blank" to={about && about.socialMedia.discord}><FontAwesomeIcon icon={faDiscord} className='socialMedia-icons'/></Link>
            </div>
         </div>
         <div className="speciality-container">

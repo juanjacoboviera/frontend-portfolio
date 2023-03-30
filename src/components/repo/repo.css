@@ -17,7 +17,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    max-width: 556px;
+    max-width: 100%;
     min-height: 369px;
     background-color: #323443;
     border-radius: 20px;
@@ -53,7 +53,7 @@
 
 /* MEDIA QUERIES */
 
-   @media screen and (min-width: 0px) and (max-width: 768px) {
+@media screen and (min-width: 0px) and (max-width: 431px) {
     .repos-container{
         display: flex;
         flex-direction: column;
@@ -67,6 +67,29 @@
     .repo-card{
         max-width: 100%;
     }
+
+    .repo-techStack img{
+        height: 40px;
+        width: 40px;
+    }
+
+   }
+   
+   @media screen and (min-width: 432px) and (max-width: 820px) {
+    .repos-container{
+        display: flex;
+        flex-direction: column;
+        max-height: 768px;
+    }
+
+    .showAll-repos{
+        max-height: 2515px;
+       }
+
+    .repo-card{
+        max-width: 100%;
+    }
+
 
    }
    
