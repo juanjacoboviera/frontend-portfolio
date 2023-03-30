@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-
+import cv from '../../assets/juanJacoboVieraCv.pdf'
 
 const About = ({about}) => {
   const settings = {
@@ -70,6 +70,7 @@ const About = ({about}) => {
             <div className="whatIdo-container">
                 <h3>What I do</h3>
                 <p>{about && about.whatIDo}</p>
+                <a className='generic-btn btn-margin' href={cv} download>Download my CV</a>
             </div>
             <div className="skills-container">
             <Slider {...settings}>
