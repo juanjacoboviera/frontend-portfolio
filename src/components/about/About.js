@@ -3,7 +3,7 @@ import juandev from '../../assets/front-end-dev2.jpg'
 import Skill from '../skill/Skill'
 import './about.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEdit, faSearch, faArrowRightLong } from '@fortawesome/free-solid-svg-icons'
+import { faEdit, faSearch, faArrowRightLong, faDownload } from '@fortawesome/free-solid-svg-icons'
 import { faLinkedin, faGithub, faDiscord } from '@fortawesome/free-brands-svg-icons'
 import { Link } from 'react-router-dom'
 import Slider from "react-slick";
@@ -70,7 +70,9 @@ const About = ({about}) => {
             <div className="whatIdo-container">
                 <h3>What I do</h3>
                 <p>{about && about.whatIDo}</p>
-                <a className='generic-btn btn-margin' href={cv} download>Download my CV</a>
+                <span className='btn-background'>
+                <a className='generic-btn cv-btn' href={cv} download><FontAwesomeIcon icon={faDownload}/>Download my CV</a>
+                </span>
             </div>
             <div className="skills-container">
             <Slider {...settings}>
