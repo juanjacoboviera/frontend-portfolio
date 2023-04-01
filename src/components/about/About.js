@@ -3,7 +3,7 @@ import juandev from '../../assets/front-end-dev2.jpg'
 import Skill from '../skill/Skill'
 import './about.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEdit, faSearch, faArrowRightLong, faDownload } from '@fortawesome/free-solid-svg-icons'
+import { faGlobe, faPaintBrush, faSwatchbook, faDownload } from '@fortawesome/free-solid-svg-icons'
 import { faLinkedin, faGithub, faDiscord } from '@fortawesome/free-brands-svg-icons'
 import { Link } from 'react-router-dom'
 import Slider from "react-slick";
@@ -12,6 +12,8 @@ import "slick-carousel/slick/slick-theme.css";
 import cv from '../../assets/juanJacoboVieraCv.pdf'
 
 const About = ({about}) => {
+  const icons = {webDesign: faGlobe, uiDesign: faPaintBrush, productDesign: faSwatchbook}
+
   const settings = {
     dots: false,
     infinite: true,
@@ -76,7 +78,7 @@ const About = ({about}) => {
             </div>
             <div className="skills-container">
             <Slider {...settings}>
-                {about && about.skills.map(skill => <Skill icon={faEdit} title={skill.title} description={skill.description} /> )}
+                {about && about.skills.map(skill => {console.log(skill); return <Skill icon={icons[skill.icon]} title={skill.title} description={skill.description} />} )}
                 {/* <Skill icon={faEdit} title="Web Development" description="You will receive a customized plan for your fitness journey, and lots of support" />
                 <Skill icon={faSearch} title="Ux Research" description="You will receive a customized plan for your fitness journey, and lots of support" /> */}
                 </Slider>

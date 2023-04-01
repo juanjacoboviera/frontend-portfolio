@@ -3,12 +3,12 @@
       [{
         about: {
             img: "https://i.imgur.com/8GOc7sO.jpeg",
-            bio: "I am deeply passionate about design, technology, and marketing. To me, these three fields are like puzzle pieces that fit together perfectly, creating something truly remarkable when combined.",
-            whatIDo: "I work with HTML5, CSS, JavaScript and React.JS. These technologies enable me to craft dynamic user experiences through proper web development, ensuring that each project meets the highest standards.",
+            bio: "I am deeply passionate about technology and design. To me, these two fields are like puzzle pieces that fit together perfectly, creating something truly remarkable when properly combined.",
+            whatIDo: "I use programming languages and web development frameworks to build websites and web applications that deliver exceptional online experiences, meeting high standards and user expectations.",
             skills: [
-                {title: "Web Development", description: "I build websites and web applications using programming languages and web development frameworks to create functional online experiences.", icon: "fa-edit"}, 
-                {title: "UI Design", description: " I design interfaces for websites and applications that are both visually appealing and easy to use.", icon: "fa-edit"},
-                {title: "Product Design", description: " I design and develop products that solve problems and enhance user experiences.", icon: "fa-edit"}
+                {title: "Web Development", description: " I work with HTML5, CSS, JavaScript and React.JS. These technologies enable me to craft dynamic user experiences.", icon: "webDesign"}, 
+                {title: "UI Design", description: "I develop user flows, wireframes, and prototypes that clearly communicate design concepts and solutions.", icon: "uiDesign"},
+                {title: "Product Design", description: "I use methods such as Design Thinking and Benchmarking to design prototypes aligned with project objectives.", icon: "productDesign"}
             ],
             "socialMedia":{
                 linkedin: "https://www.linkedin.com/in/juanjacoboviera-frontenddev/",

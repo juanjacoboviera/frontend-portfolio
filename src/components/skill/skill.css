@@ -14,8 +14,9 @@
 
 .iconBackground{
     position: absolute;
-    top: -30px;
-    right: 35%;
+    top: 3%;
+    left: 50%;
+    transform: translate(-50%, -50%);
    display: flex;
    justify-content: center;
    align-items: center;
