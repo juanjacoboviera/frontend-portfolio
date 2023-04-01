@@ -1,8 +1,14 @@
+.about-container{
+    display: flex;
+    flex-direction: column;
+}
+
 .bio-container{
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 4fr 2fr;
     padding-top: 50px;
 }
+
 
 .bio-data__container{
     display: flex;
@@ -83,6 +89,10 @@
     right: -10px !important;
 }
 
+#connect-btn{
+    display: none !important;
+}
+
 /* MEDIA QUERIES */
 
  @media screen and (min-width: 0px) and (max-width: 625px) {
@@ -132,7 +142,7 @@
  }
 
  
- @media screen and (min-width: 626px) and (max-width: 767px) {
+ @media screen and (min-width: 0) and (max-width: 767px) {
     .bio-container{
         display: flex;
         flex-direction: column;
@@ -153,9 +163,23 @@
         margin: 10px 0;
     }
 
+    .img-background{
+        order: -2;;
+    }
+
+    .contact-data{
+        margin: 10px 0;
+        order: -1;
+
+    }
+
     .contact-data h3{
         display: none;
     }
+    
+    #connect-btn{
+        display: flex !important;
+    } 
 
 
  }

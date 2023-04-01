@@ -11,7 +11,7 @@ const Footer = ({techstack}) => {
     <footer id='tech-stack'>
       <div className="footer-header">
         <h2 className='tech-stack-title'>My Tech-Stack</h2>
-        <BackToTopBtn title='Back to Top' iconName={faArrowTurnUp}/>
+        <BackToTopBtn title='Contact me' iconName={faArrowTurnUp}/>
       </div>
         <div className="logos-container">
             <div className="tech-logos">

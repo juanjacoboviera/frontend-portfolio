@@ -52,10 +52,10 @@ const About = ({about}) => {
   return (
     <div id='bio' className='about-container'>
         <div className="bio-container">
-            <div className="bio-data__container">
-              <div className="img-background">
+              <div className="img-background" id='bio'>
                   <img className='profile-pic' src={about && about.img} width="155px" height='155px' alt="" />
               </div>
+            <div className="bio-data__container">
               <div className="bio-text">
                     <h3>Biography</h3>
                     <p>{about && about.bio}</p>
@@ -67,6 +67,9 @@ const About = ({about}) => {
               <Link target="blank" to={about && about.socialMedia.github}><FontAwesomeIcon icon={faGithub} className='socialMedia-icons'/></Link>
               <Link target="blank" to={about && about.socialMedia.discord}><FontAwesomeIcon icon={faDiscord} className='socialMedia-icons'/></Link>
            </div>
+           <span id='connect-btn' className='btn-background'>
+           <Link  target="blank" to={about && about.socialMedia.linkedin}><button className='generic-btn cv-btn'><FontAwesomeIcon icon={faLinkedin}/> Lets Connect</button></Link>
+           </span>
         </div>
         <div className="speciality-container">
             <div className="whatIdo-container">
