@@ -41,3 +41,14 @@
     
 }
 
+.white-hover:hover{
+    background-color: white;
+    color: #323443;
+    
+}
+
+.darker-hover:hover{
+   background-color:  #252732;
+   color: white;
+}
+

@@ -68,7 +68,7 @@ const About = ({about}) => {
               <Link target="blank" to={about && about.socialMedia.discord}><FontAwesomeIcon icon={faDiscord} className='socialMedia-icons'/></Link>
            </div>
            <span id='connect-btn' className='btn-background'>
-           <Link  target="blank" to={about && about.socialMedia.linkedin}><button className='generic-btn cv-btn'><FontAwesomeIcon icon={faLinkedin}/> Lets Connect</button></Link>
+           <Link  target="blank" to={about && about.socialMedia.linkedin}><button className='generic-btn cv-btn darker-hover'><FontAwesomeIcon icon={faLinkedin}/> Lets Connect</button></Link>
            </span>
         </div>
         <div className="speciality-container">
@@ -76,7 +76,7 @@ const About = ({about}) => {
                 <h3>What I do</h3>
                 <p>{about && about.whatIDo}</p>
                 <span className='btn-background'>
-                <a className='generic-btn cv-btn' href={cv} download><FontAwesomeIcon icon={faDownload}/>Download my CV</a>
+                <a className='generic-btn cv-btn darker-hover' href={cv} download><FontAwesomeIcon icon={faDownload}/>Download my CV</a>
                 </span>
             </div>
             <div className="skills-container">

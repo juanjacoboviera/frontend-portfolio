@@ -6,7 +6,7 @@ import './seeMoreBtn.css'
 
 const SeeMoreBtn = ({onClick, title, iconName}) => {
   return (
-    <button onClick={onClick} className='seeMore-btn'><FontAwesomeIcon icon={iconName}/>{title}</button>
+    <button onClick={onClick} className='seeMore-btn darker-hover'><FontAwesomeIcon icon={iconName}/>{title}</button>
   )
 }
 
