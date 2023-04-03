@@ -16,6 +16,10 @@
     grid-template-columns: 1fr 1fr;
 }
 
+.project:hover h2{
+    color: rgba(59,246,134,1);
+  }
+
 .project-thumbnail-container{
     display: flex;
     flex-direction: column;

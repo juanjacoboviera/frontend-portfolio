@@ -15,7 +15,7 @@ const Footer = ({techstack}) => {
       </div>
         <div className="logos-container">
             <div className="tech-logos">
-              {techstack && techstack.map(tech =>  <img src={tech.logo} alt="tech-logos" />)}
+              {techstack && techstack.map(tech => <div className='animation'><img className='techStack-logos' src={tech.logo} alt="tech-logo" /></div>)}
             </div>
         </div>
         

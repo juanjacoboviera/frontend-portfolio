@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 
 const Repo = ({repo, minHeight}) => {
   return (
-    <Link target='blank' to={repo.link}><div className="repo-card" style={{ 'minHeight': minHeight > 0 ? `${minHeight}px` : undefined }}>
+    <Link className='animation' target='blank' to={repo.link}><div className="repo-card" style={{ 'minHeight': minHeight > 0 ? `${minHeight}px` : undefined }}>
         <div className="repo-description">
             <h3>{repo.title}</h3>
             <p>{repo.description}</p>
