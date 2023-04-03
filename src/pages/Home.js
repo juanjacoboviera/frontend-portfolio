@@ -17,7 +17,7 @@ const [moreProjectsBtn, setMoreProjectsBtn] = useState(false);
 const [moreReposBtn, setMoreReposBtn] = useState(false);
 const {about, Repos, techStack, projects} = profileData
 const [minHeight, setMinHeight] = useState(0);
-const icons = {icon1: faNavicon,}
+
 
 
 useEffect(()=>{

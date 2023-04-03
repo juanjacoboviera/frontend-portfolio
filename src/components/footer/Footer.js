@@ -5,6 +5,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faNavicon ,faArrowTurnUp } from '@fortawesome/free-solid-svg-icons'
 import { HashLink } from 'react-router-hash-link';
 import BackToTopBtn from '../backToTopBtn/BackToTopBtn'
+import Tippy from '@tippyjs/react';
+import 'tippy.js/dist/tippy.css';
 
 const Footer = ({techstack}) => {
   return (
@@ -15,7 +17,7 @@ const Footer = ({techstack}) => {
       </div>
         <div className="logos-container">
             <div className="tech-logos">
-              {techstack && techstack.map(tech => <div className='animation'><img className='techStack-logos' src={tech.logo} alt="tech-logo" /></div>)}
+              {techstack && techstack.map(tech => <Tippy content={tech.title}><div className='animation'><img className='techStack-logos' src={tech.logo} alt="tech-logo" /></div></Tippy>)}
             </div>
         </div>
         
