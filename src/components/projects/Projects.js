@@ -9,8 +9,9 @@ const projects = ({project}) => {
         <Link target='blank' to={project && project.link}><div className="project">
         <div className="project-thumbnail-container">
         <FontAwesomeIcon icon={faArrowUpRightFromSquare} className='projectLink-btn'/>
+        <div className='project-img-overlayFilter'>
             <img src={project && project.img} max-width='443px' height='170px' alt="project thumbnail" />
-
+        </div>
         </div>
         <div className="project-details">
             <h4>{project && project.type}</h4>

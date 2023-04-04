@@ -16,9 +16,19 @@
     grid-template-columns: 1fr 1fr;
 }
 
-.project:hover h2{
+.project:hover h2 {
     color: rgba(59,246,134,1);
   }
+
+.project:hover .project-img-overlayFilter::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background:  rgba(59,246,134,0.9);
+    opacity: 0.7; /* controls the transparency of the overlay */
+  }
+ 
+
 
 .project-thumbnail-container{
     display: flex;
@@ -29,6 +39,10 @@
     /* max-width: 555px; */
     height: 282px;
     background-color: #323443;
+}
+
+.project-img-overlayFilter{
+    position: relative;
 }
 
 .project-details{
