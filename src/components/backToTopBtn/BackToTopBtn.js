@@ -7,7 +7,7 @@ import { HashLink } from 'react-router-hash-link';
 
 const BackToTopBtn = ({onClick, title, iconName}) => {
   return (
-  <HashLink smooth to='#bio'><button onClick={onClick} className='generic-btn white-hover'><FontAwesomeIcon icon={iconName}/>{title}</button></HashLink>
+  <HashLink smooth to='#juanJacoboViera'><button onClick={onClick} className='backToTop-btn'><FontAwesomeIcon icon={iconName}/>{title}</button></HashLink>
   )
 }
 

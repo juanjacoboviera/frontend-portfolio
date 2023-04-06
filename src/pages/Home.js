@@ -6,10 +6,10 @@ import Projects from '../components/projects/Projects'
 import Repo from '../components/repo/Repo'
 import SeeMoreBtn from '../components/seeMoreBtn/SeeMoreBtn'
 import Footer from '../components/footer/Footer'
-import { getProfileData, addCollectionAndDocuments } from '../utils/firebase/firebase.utils'
+import { getProfileData, addCollectionAndDocuments, getDocument } from '../utils/firebase/firebase.utils'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faNavicon ,faArrowTurnUp } from '@fortawesome/free-solid-svg-icons'
-
+import {espanol, english} from '../db'
 
 const Home = () => {
 const [profileData, setProfileData] = useState({});
@@ -17,16 +17,36 @@ const [moreProjectsBtn, setMoreProjectsBtn] = useState(false);
 const [moreReposBtn, setMoreReposBtn] = useState(false);
 const {about, Repos, techStack, projects} = profileData
 const [minHeight, setMinHeight] = useState(0);
+const [lang, setLang] = useState(null);
 
+console.log(profileData)
 
 
 useEffect(()=>{
-  const getProfileMap = async () =>{
-    const profileData = await getProfileData();
-    setProfileData(profileData[0])
-  
+  const browserLanguage = window.navigator.language;
+  if (browserLanguage.startsWith('es')) {
+    setLang('es');
+  } else {
+    setLang('en');
   }
-   getProfileMap()
+
+  if(lang == 'es'){
+    const spanishDocId = 'm6BOhxTiyyU2v000f55r';
+    const getDoc = async () =>{
+      const docData = await getDocument('languages', spanishDocId)
+      setProfileData(docData)
+    }
+    getDoc()
+  }else{
+    const englishDocId = 'oaPbNE93YhzcszhfdsQW';
+    const getDoc = async () =>{
+      const docData = await getDocument('languages', 'oaPbNE93YhzcszhfdsQW')
+      console.log(docData)
+      setProfileData(docData)
+    }
+    getDoc()
+  }
+ 
 },[])
 
 
@@ -57,7 +77,7 @@ const seeMoreSwitch = (switchType) => {
   return (
     <>
    <header>
-    {/* <button onClick={addCollectionAndDocuments}>export</button> */}
+    {/* <button onClick={(()=> addCollectionAndDocuments('espanol', espanol))}>export</button> */}
       <Nav/>
       <HeaderTitle/>
    </header>

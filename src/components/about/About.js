@@ -81,7 +81,7 @@ const About = ({about}) => {
             </div>
             <div className="skills-container">
             <Slider {...settings}>
-                {about && about.skills.map(skill => {console.log(skill); return <Skill icon={icons[skill.icon]} title={skill.title} description={skill.description} />} )}
+                {about && about.skills.map(skill => {return <Skill icon={icons[skill.icon]} title={skill.title} description={skill.description} />} )}
                 {/* <Skill icon={faEdit} title="Web Development" description="You will receive a customized plan for your fitness journey, and lots of support" />
                 <Skill icon={faSearch} title="Ux Research" description="You will receive a customized plan for your fitness journey, and lots of support" /> */}
                 </Slider>

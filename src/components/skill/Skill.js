@@ -4,8 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEdit, faGlobe, faPaintBrush, faSwatchbook} from '@fortawesome/free-solid-svg-icons'
 
 const Skill = ({icon, title, description}) => {
-  console.log(icon)
-
   return (
     <div className='skill-card'>
         <div className="iconBackground">
