@@ -15,7 +15,7 @@ const Home = () => {
 const [profileData, setProfileData] = useState({});
 const [moreProjectsBtn, setMoreProjectsBtn] = useState(false);
 const [moreReposBtn, setMoreReposBtn] = useState(false);
-const {about, Repos, techStack, projects} = profileData
+const {webtitles, about, Repos, techStack, projects} = profileData
 const [minHeight, setMinHeight] = useState(0);
 const [lang, setLang] = useState(null);
 
@@ -40,7 +40,7 @@ useEffect(()=>{
   }else{
     const englishDocId = 'oaPbNE93YhzcszhfdsQW';
     const getDoc = async () =>{
-      const docData = await getDocument('languages', 'oaPbNE93YhzcszhfdsQW')
+      const docData = await getDocument('languages', englishDocId)
       console.log(docData)
       setProfileData(docData)
     }
@@ -79,7 +79,7 @@ const seeMoreSwitch = (switchType) => {
    <header>
     {/* <button onClick={(()=> addCollectionAndDocuments('espanol', espanol))}>export</button> */}
       <Nav/>
-      <HeaderTitle/>
+      <HeaderTitle title={about?.title}/>
    </header>
    <main>
       <About about={about}/>
