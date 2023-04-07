@@ -37,19 +37,19 @@ li:hover{
 
 
 @media screen and (min-width: 0px) and (max-width: 404px) {
-    ul{
-       display: none;
+    li{
+       display: none !important;
     }
     .logo{
-        font-size: 1em;
+        font-size: 1em !important;
     }
    }
     
     
 
 @media screen and (min-width: 445px) and (max-width: 990px) {
- ul{
-    display: none;
+ li{
+    display: none !important;
  }
 }
  
