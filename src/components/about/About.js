@@ -9,8 +9,10 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import cv from '../../assets/juanJacoboVieraCv.pdf'
+import cvSpanish from '../../assets/Juan_Jacobo_Viera_CV_English.pdf'
+import cvEnglish from '../../assets/Juan_Jacobo_Viera_CV_espanol.pdf'
 
-const About = ({about, webtitles}) => {
+const About = ({about, webtitles, spanish}) => {
   const icons = {webDesign: faGlobe, uiDesign: faPaintBrush, productDesign: faSwatchbook}
 
   const settings = {
@@ -75,7 +77,7 @@ const About = ({about, webtitles}) => {
                 <h3>{webtitles && webtitles.titles[2]}</h3>
                 <p>{about && about.whatIDo}</p>
                 <span className='btn-background'>
-                <a className='generic-btn cv-btn darker-hover' href={cv} download><FontAwesomeIcon icon={faDownload}/>{webtitles && webtitles.buttons[1]}</a>
+                <a className='generic-btn cv-btn darker-hover' href={spanish ? cvEnglish : cvSpanish} download><FontAwesomeIcon icon={faDownload}/>{webtitles && webtitles.buttons[1]}</a>
                 </span>
             </div>
             <div className="skills-container">

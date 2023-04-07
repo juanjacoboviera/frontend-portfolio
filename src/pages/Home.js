@@ -90,7 +90,7 @@ const seeMoreSwitch = (switchType) => {
       <HeaderTitle title={about?.title}/>
    </header>
    <main>
-      <About about={about} webtitles={webtitles}/>
+      <About about={about} webtitles={webtitles} spanish={spanish}/>
       <section id={spanish == true? 'proyectos' : 'projects'} className='projects-section'>
           <h2>{webtitles?.titles[3]}</h2>
           <div className={`projects-container ${moreProjectsBtn ? 'showAll-projects' : ''}`}>
