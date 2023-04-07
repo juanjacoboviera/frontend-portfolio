@@ -20,7 +20,7 @@ const [manuallySetLanguage, setManuallySetLanguage] = useState(false);
 const {webtitles, about, Repos, techStack, projects} = profileData
 
 useEffect(() => {
-  if (manuallySetLanguage == false) {
+  if (!manuallySetLanguage) {
     const browserLanguage = window.navigator.language;
     if (browserLanguage.startsWith('es')) {
       setSpanish(true);
@@ -29,14 +29,16 @@ useEffect(() => {
       const docData = await getDocument('languages', spanishDocId);
       setProfileData(docData);
     };
-      
+      getDoc()
     } else {
+      console.log('hi')
       setSpanish(false);
       const englishDocId = '8CYe3SBSm2GfxT5vC39v';
       const getDoc = async () => {
       const docData = await getDocument('languages', englishDocId);
       setProfileData(docData);
       };
+      getDoc()
     }
   }
 
@@ -47,7 +49,9 @@ useEffect(() => {
       setProfileData(docData);
     };
     getDoc();
-  } else {
+  } if (manuallySetLanguage == true && spanish == false ) {
+    console.log('hello')
+    console.log(spanish)
     const englishDocId = '8CYe3SBSm2GfxT5vC39v';
     const getDoc = async () => {
       const docData = await getDocument('languages', englishDocId);
