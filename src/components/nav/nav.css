@@ -36,12 +36,12 @@ li:hover{
 /* MEDIA QUERIES */
 
 
-@media screen and (min-width: 0px) and (max-width: 404px) {
+@media screen and (min-width: 0px) and (max-width: 444px) {
     li{
-       display: none !important;
+       display: none;
     }
     .logo{
-        font-size: 1em !important;
+        font-size: 1em;
     }
    }
     
@@ -49,7 +49,7 @@ li:hover{
 
 @media screen and (min-width: 445px) and (max-width: 990px) {
  li{
-    display: none !important;
+    display: none;
  }
 }
  
