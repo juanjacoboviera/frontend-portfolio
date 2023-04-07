@@ -11,11 +11,11 @@ const Nav = ({navItems, spanish, setSpanish, setManuallySetLanguage}) => {
         <h2 id='juanJacoboViera' className='logo'>Juan Jacobo Viera</h2>
         <ul className=''>
           {navItems?.map(item => <HashLink key={item} smooth to={`#${item.toLowerCase()}`}><li>{item}</li></HashLink> )}
-          <button onClick={() =>{
+        </ul>
+        <button onClick={() =>{
             setManuallySetLanguage(true)
             setSpanish((prev) => !prev)
           }} className='generic-btn language-btn white-hover'>{spanish == true ? 'English' : 'Español'}</button>
-        </ul>
         </div>
    </nav>
   )

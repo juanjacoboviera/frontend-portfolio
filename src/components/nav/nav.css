@@ -37,7 +37,7 @@ li:hover{
 
 
 @media screen and (min-width: 0px) and (max-width: 404px) {
-    li{
+    ul{
        display: none;
     }
     .logo{
@@ -48,7 +48,7 @@ li:hover{
     
 
 @media screen and (min-width: 445px) and (max-width: 990px) {
- li{
+ ul{
     display: none;
  }
 }
