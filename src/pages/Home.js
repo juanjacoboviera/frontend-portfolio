@@ -31,7 +31,6 @@ useEffect(() => {
     };
       getDoc()
     } else {
-      console.log('hi')
       setSpanish(false);
       const englishDocId = '8CYe3SBSm2GfxT5vC39v';
       const getDoc = async () => {
@@ -50,8 +49,6 @@ useEffect(() => {
     };
     getDoc();
   } if (manuallySetLanguage == true && spanish == false ) {
-    console.log('hello')
-    console.log(spanish)
     const englishDocId = '8CYe3SBSm2GfxT5vC39v';
     const getDoc = async () => {
       const docData = await getDocument('languages', englishDocId);
