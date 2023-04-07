@@ -6,49 +6,56 @@ import Projects from '../components/projects/Projects'
 import Repo from '../components/repo/Repo'
 import SeeMoreBtn from '../components/seeMoreBtn/SeeMoreBtn'
 import Footer from '../components/footer/Footer'
-import { getProfileData, addCollectionAndDocuments, getDocument } from '../utils/firebase/firebase.utils'
+import { getDocument, addCollectionAndDocuments } from '../utils/firebase/firebase.utils'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faNavicon ,faArrowTurnUp } from '@fortawesome/free-solid-svg-icons'
-import {espanol, english} from '../db'
+import { faNavicon } from '@fortawesome/free-solid-svg-icons'
 
 const Home = () => {
 const [profileData, setProfileData] = useState({});
 const [moreProjectsBtn, setMoreProjectsBtn] = useState(false);
 const [moreReposBtn, setMoreReposBtn] = useState(false);
-const {webtitles, about, Repos, techStack, projects} = profileData
 const [minHeight, setMinHeight] = useState(0);
-const [lang, setLang] = useState(null);
+const [spanish, setSpanish] = useState(false);
+const [manuallySetLanguage, setManuallySetLanguage] = useState(false);
+const {webtitles, about, Repos, techStack, projects} = profileData
 
-console.log(profileData)
+useEffect(() => {
+  if (manuallySetLanguage == false) {
+    const browserLanguage = window.navigator.language;
+    if (browserLanguage.startsWith('es')) {
+      setSpanish(true);
+      const spanishDocId = 'Co04VGZ0d7yri741HTmb';
+      const getDoc = async () => {
+      const docData = await getDocument('languages', spanishDocId);
+      setProfileData(docData);
+    };
+      
+    } else {
+      setSpanish(false);
+      const englishDocId = '8CYe3SBSm2GfxT5vC39v';
+      const getDoc = async () => {
+      const docData = await getDocument('languages', englishDocId);
+      setProfileData(docData);
+      };
+    }
+  }
 
-
-useEffect(()=>{
-  const browserLanguage = window.navigator.language;
-  if (browserLanguage.startsWith('es')) {
-    setLang('es');
+  if (manuallySetLanguage == true && spanish == true ) {
+    const spanishDocId = 'Co04VGZ0d7yri741HTmb';
+    const getDoc = async () => {
+      const docData = await getDocument('languages', spanishDocId);
+      setProfileData(docData);
+    };
+    getDoc();
   } else {
-    setLang('en');
+    const englishDocId = '8CYe3SBSm2GfxT5vC39v';
+    const getDoc = async () => {
+      const docData = await getDocument('languages', englishDocId);
+      setProfileData(docData);
+    };
+    getDoc();
   }
-
-  if(lang == 'es'){
-    const spanishDocId = 'm6BOhxTiyyU2v000f55r';
-    const getDoc = async () =>{
-      const docData = await getDocument('languages', spanishDocId)
-      setProfileData(docData)
-    }
-    getDoc()
-  }else{
-    const englishDocId = 'oaPbNE93YhzcszhfdsQW';
-    const getDoc = async () =>{
-      const docData = await getDocument('languages', englishDocId)
-      console.log(docData)
-      setProfileData(docData)
-    }
-    getDoc()
-  }
- 
-},[])
-
+}, [spanish, manuallySetLanguage]);
 
 useEffect(() => {
   function handleResize() {
@@ -73,32 +80,32 @@ useEffect(() => {
 const seeMoreSwitch = (switchType) => {
   switchType((prev) => !prev)
 }
-
   return (
     <>
    <header>
-    {/* <button onClick={(()=> addCollectionAndDocuments('espanol', espanol))}>export</button> */}
-      <Nav/>
+    {/* The button below triggers the helper function that updates the firebase collection */}
+    {/* <button onClick={addCollectionAndDocuments}>export</button> */}
+      <Nav navItems={webtitles?.nav} spanish={spanish} setSpanish={setSpanish} setManuallySetLanguage={setManuallySetLanguage}/>
       <HeaderTitle title={about?.title}/>
    </header>
    <main>
-      <About about={about}/>
-      <section id='projects' className='projects-section'>
-          <h2>Featured Projects</h2>
+      <About about={about} webtitles={webtitles}/>
+      <section id={spanish == true? 'proyectos' : 'projects'} className='projects-section'>
+          <h2>{webtitles?.titles[3]}</h2>
           <div className={`projects-container ${moreProjectsBtn ? 'showAll-projects' : ''}`}>
-          {projects?.map(project => <Projects project={project}/> )}
+          {projects?.map(project => <Projects key={project.title} project={project}/> )}
           </div>
-          <SeeMoreBtn onClick={() => {seeMoreSwitch(setMoreProjectsBtn)}} title={moreProjectsBtn ? 'See Less' : 'See More'} iconName={faNavicon}/>
+          <SeeMoreBtn onClick={() => {seeMoreSwitch(setMoreProjectsBtn)}} title={moreProjectsBtn ? webtitles?.buttons[3] : webtitles?.buttons[2]} iconName={faNavicon}/>
         </section>
-      <section id='repositories' className='repos-section'>
-        <h2>My Repositories</h2>
+      <section id={spanish == true? 'repositorios' : 'repositories'}  className='repos-section'>
+        <h2>{webtitles?.titles[4]}</h2>
         <div className={`repos-container ${moreReposBtn ? 'showAll-repos' : ''}`}>
-        {Repos?.map(repo => <Repo repo={repo} minHeight={minHeight}/> )}
+        {Repos?.map(repo => <Repo key={repo.title} repo={repo} minHeight={minHeight}/> )}
         </div>
-          <SeeMoreBtn onClick={() => {seeMoreSwitch(setMoreReposBtn)}} title={moreReposBtn ? 'See Less' : 'See More'} iconName={faNavicon}/>
+          <SeeMoreBtn onClick={() => {seeMoreSwitch(setMoreReposBtn)}} title={moreReposBtn ? webtitles?.buttons[3] : webtitles?.buttons[2]} iconName={faNavicon}/>
       </section>
    </main>
-   <Footer techstack={techStack}/>
+   <Footer techstack={techStack} webtitles={webtitles} spanish={spanish}/>
     </>
   )
 }

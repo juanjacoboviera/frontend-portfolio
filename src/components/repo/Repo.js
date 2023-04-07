@@ -13,7 +13,7 @@ const Repo = ({repo, minHeight}) => {
         </div>
         <div className="repo-info">
             <div className="repo-techStack">
-                {repo && repo.techStack.map(tech => <img src={tech.icon} alt="" width='60px' height='60px' />) }
+                {repo && repo.techStack.map(tech => <img key={tech.title} src={tech.icon} alt="" width='60px' height='60px' />) }
             </div>
             <div className="repo-rating">
                 <FontAwesomeIcon icon={faStar} style={{color: '#FFF615', fontSize: '1.3em', paddingRight: '10px'}}/>

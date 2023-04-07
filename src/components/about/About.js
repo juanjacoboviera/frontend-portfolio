@@ -1,5 +1,4 @@
 import React from 'react'
-import juandev from '../../assets/front-end-dev2.jpg'
 import Skill from '../skill/Skill'
 import './about.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -11,7 +10,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import cv from '../../assets/juanJacoboVieraCv.pdf'
 
-const About = ({about}) => {
+const About = ({about, webtitles}) => {
   const icons = {webDesign: faGlobe, uiDesign: faPaintBrush, productDesign: faSwatchbook}
 
   const settings = {
@@ -57,35 +56,32 @@ const About = ({about}) => {
               </div>
             <div className="bio-data__container">
               <div className="bio-text">
-                    <h3>Biography</h3>
+                    <h3>{webtitles && webtitles.titles[0]}</h3>
                     <p>{about && about.bio}</p>
               </div>
            </div>
            <div className="contact-data">
-              <h3>Lets connect</h3>
+              <h3>{webtitles && webtitles.titles[1]}</h3>
               <Link  target="blank" to={about && about.socialMedia.linkedin}><FontAwesomeIcon icon={faLinkedin} className='socialMedia-icons'/></Link>
               <Link target="blank" to={about && about.socialMedia.github}><FontAwesomeIcon icon={faGithub} className='socialMedia-icons'/></Link>
               <Link target="blank" to={about && about.socialMedia.discord}><FontAwesomeIcon icon={faDiscord} className='socialMedia-icons'/></Link>
            </div>
            <span id='connect-btn' className='btn-background'>
-           <Link  target="blank" to={about && about.socialMedia.linkedin}><button className='generic-btn cv-btn darker-hover'><FontAwesomeIcon icon={faLinkedin}/> Lets Connect</button></Link>
+           <Link  target="blank" to={about && about.socialMedia.linkedin}><button className='generic-btn cv-btn darker-hover'><FontAwesomeIcon icon={faLinkedin}/>{webtitles && webtitles.buttons[0]}</button></Link>
            </span>
         </div>
         <div className="speciality-container">
             <div className="whatIdo-container">
-                <h3>What I do</h3>
+                <h3>{webtitles && webtitles.titles[2]}</h3>
                 <p>{about && about.whatIDo}</p>
                 <span className='btn-background'>
-                <a className='generic-btn cv-btn darker-hover' href={cv} download><FontAwesomeIcon icon={faDownload}/>Download my CV</a>
+                <a className='generic-btn cv-btn darker-hover' href={cv} download><FontAwesomeIcon icon={faDownload}/>{webtitles && webtitles.buttons[1]}</a>
                 </span>
             </div>
             <div className="skills-container">
             <Slider {...settings}>
-                {about && about.skills.map(skill => {return <Skill icon={icons[skill.icon]} title={skill.title} description={skill.description} />} )}
-                {/* <Skill icon={faEdit} title="Web Development" description="You will receive a customized plan for your fitness journey, and lots of support" />
-                <Skill icon={faSearch} title="Ux Research" description="You will receive a customized plan for your fitness journey, and lots of support" /> */}
+                {about && about.skills.map(skill => {return <Skill key={skill.title} icon={icons[skill.icon]} title={skill.title} description={skill.description} />} )}
                 </Slider>
-                {/* <FontAwesomeIcon icon={faArrowRightLong} className='socialMedia-icons'/> */}
             </div>
         </div>
     </div>

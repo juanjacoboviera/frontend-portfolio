@@ -18,21 +18,11 @@ const firebaseConfig = {
   export const addCollectionAndDocuments =  async () =>{
     const colletctionRef = collection(db, 'languages');
 
-    for (let object of english){
-        const docRef = await addDoc(colletctionRef, object)
+    for (let object of espanol){
+        const docRef = await addDoc(colletctionRef, object, "espanol")
         console.log("done!")
     }
   }
-
-  // export const getProfileData =  async(data) =>{
-  //   const colletctionRef = collection(db, 'juanjacoboviera');
-  //   const q = query(colletctionRef)
-
-  //   const querySnapshot = await getDocs(q)
-  //   const data = querySnapshot.docs.map((doc) => doc.data());
-  //   return data;
-
-  // }
 
 export async function getDocument(collectionName, docId) {
   const docRef = doc(db, collectionName, docId)
@@ -40,7 +30,6 @@ export async function getDocument(collectionName, docId) {
 
   if (docSnapshot.exists) {
     const docData = { id: docSnapshot.id, ...docSnapshot.data() };
-    console.log(`Retrieved document with ID ${docId} from ${collectionName}`);
     return docData;
   } else {
     console.log(`Document with ID ${docId} not found in ${collectionName}`);

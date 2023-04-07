@@ -8,16 +8,16 @@ import BackToTopBtn from '../backToTopBtn/BackToTopBtn'
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
 
-const Footer = ({techstack}) => {
+const Footer = ({techstack, webtitles, spanish}) => {
   return (
-    <footer id='tech-stack'>
+    <footer id={spanish == true? 'tecnologías' : 'tech-stack'} >
       <div className="footer-header">
-        <h2 className='tech-stack-title'>My Tech-Stack</h2>
-        <BackToTopBtn title='Contact me' iconName={faArrowTurnUp}/>
+        <h2 className='tech-stack-title'>{webtitles?.titles[5]}</h2>
+        <BackToTopBtn title={webtitles?.buttons[4]} iconName={faArrowTurnUp}/>
       </div>
         <div className="logos-container">
             <div className="tech-logos">
-              {techstack && techstack.map(tech => <Tippy content={tech.title}><div className='animation'><img className='techStack-logos' src={tech.logo} alt="tech-logo" /></div></Tippy>)}
+              {techstack && techstack.map(tech => <Tippy key={tech.title} content={tech.title}><div className='animation'><img className='techStack-logos' src={tech.logo} alt="tech-logo" /></div></Tippy>)}
             </div>
         </div>
         

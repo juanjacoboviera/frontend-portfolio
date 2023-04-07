@@ -16,6 +16,7 @@
 ul{
     display: flex;
     flex-direction: row;
+    align-items: baseline;
     
 }
 
@@ -34,14 +35,23 @@ li:hover{
 
 /* MEDIA QUERIES */
 
-@media screen and (min-width: 0px) and (max-width: 579px) {
- ul{
+
+@media screen and (min-width: 0px) and (max-width: 404px) {
+    li{
+       display: none;
+    }
+    .logo{
+        font-size: 1em;
+    }
+   }
+    
+    
+
+@media screen and (min-width: 445px) and (max-width: 990px) {
+ li{
     display: none;
  }
 }
  
- @media screen and (min-width: 768px) and (max-width: 1086px) {
-     
-
- }
+ 
 
