@@ -24,7 +24,7 @@ useEffect(() => {
     const browserLanguage = window.navigator.language;
     if (browserLanguage.startsWith('es')) {
       setSpanish(true);
-      const spanishDocId = 'Co04VGZ0d7yri741HTmb';
+      const spanishDocId = 'QKA8UF6LtOqpPXF3OQYT';
       const getDoc = async () => {
       const docData = await getDocument('languages', spanishDocId);
       setProfileData(docData);
@@ -32,7 +32,7 @@ useEffect(() => {
       getDoc()
     } else {
       setSpanish(false);
-      const englishDocId = '8CYe3SBSm2GfxT5vC39v';
+      const englishDocId = 'WLBauG4KmgkWVdt0dWsu';
       const getDoc = async () => {
       const docData = await getDocument('languages', englishDocId);
       setProfileData(docData);
@@ -42,14 +42,14 @@ useEffect(() => {
   }
 
   if (manuallySetLanguage == true && spanish == true ) {
-    const spanishDocId = 'Co04VGZ0d7yri741HTmb';
+    const spanishDocId = 'QKA8UF6LtOqpPXF3OQYT';
     const getDoc = async () => {
       const docData = await getDocument('languages', spanishDocId);
       setProfileData(docData);
     };
     getDoc();
   } if (manuallySetLanguage == true && spanish == false ) {
-    const englishDocId = '8CYe3SBSm2GfxT5vC39v';
+    const englishDocId = 'WLBauG4KmgkWVdt0dWsu';
     const getDoc = async () => {
       const docData = await getDocument('languages', englishDocId);
       setProfileData(docData);
@@ -57,6 +57,8 @@ useEffect(() => {
     getDoc();
   }
 }, [spanish, manuallySetLanguage]);
+
+
 
 useEffect(() => {
   function handleResize() {
@@ -85,7 +87,7 @@ const seeMoreSwitch = (switchType) => {
     <>
    <header>
     {/* The button below triggers the helper function that updates the firebase collection */}
-    {/* <button onClick={addCollectionAndDocuments}>export</button> */}
+    {/* <button onClick={addCollectionAndDocuments}>export</button>  */}
       <Nav navItems={webtitles?.nav} spanish={spanish} setSpanish={setSpanish} setManuallySetLanguage={setManuallySetLanguage}/>
       <HeaderTitle title={about?.title}/>
    </header>

@@ -1,8 +1,8 @@
-.projects-section{
+.projects-section {
     padding-bottom: 70px;
 }
 
-.projects-container{
+.projects-container {
     display: flex;
     flex-direction: column;
     max-height: 1040px;
@@ -10,27 +10,31 @@
     transition: all 1.5s;
 }
 
-.project{
+.project {
     margin: 20px 0 40px 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
 .project:hover h2 {
-    color: rgba(59,246,134,1);
-  }
+    color: rgba(59, 246, 134, 1);
+}
 
 .project:hover .project-img-overlayFilter::after {
     content: "";
     position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background:  rgba(59,246,134,0.9);
-    opacity: 0.7; /* controls the transparency of the overlay */
-  }
- 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(59, 246, 134, 0.9);
+    opacity: 0.7;
+    /* controls the transparency of the overlay */
+}
 
 
-.project-thumbnail-container{
+
+.project-thumbnail-container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -41,11 +45,11 @@
     background-color: #323443;
 }
 
-.project-img-overlayFilter{
+.project-img-overlayFilter {
     position: relative;
 }
 
-.project-details{
+.project-details {
 
     display: flex;
     flex-direction: column;
@@ -59,38 +63,38 @@
     margin: 10px 0;
 }
 
-.projectLink-btn{
+.projectLink-btn {
     justify-self: flex-start;
     align-self: self-end;
-    color: white; 
+    color: white;
     font-size: 32px;
     margin: 10px 10px 0 10px;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-.showAll-projects{
- max-height: 2100px;
+.showAll-projects {
+    max-height: 4100px;
 }
 
 
- 
- /* MEDIA QUERIES */
+
+/* MEDIA QUERIES */
 
 @media screen and (min-width: 0px) and (max-width: 768px) {
     .projects-container {
         max-height: 1512px;
     }
 
-    .project{
+    .project {
         display: flex;
         flex-direction: column;
         height: 450px;
     }
 
-    .project-details{
+    .project-details {
         margin-left: 0;
 
     }
@@ -99,16 +103,16 @@ a{
         max-height: 3400px;
     }
 
-    h2{
+    h2 {
         font-size: 2em;
-    
+
     }
 }
- 
- @media screen and (min-width: 768px) and (max-width: 1086px) {
-     h2{
-        font-size: 2em;
-     }
-     
 
- }
+@media screen and (min-width: 768px) and (max-width: 1086px) {
+    h2 {
+        font-size: 2em;
+    }
+
+
+}

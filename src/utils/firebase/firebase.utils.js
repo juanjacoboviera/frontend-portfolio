@@ -16,11 +16,10 @@ const firebaseConfig = {
   export const db = getFirestore();
 
   export const addCollectionAndDocuments =  async () =>{
-    const colletctionRef = collection(db, 'languages');
-
-    for (let object of espanol){
-        const docRef = await addDoc(colletctionRef, object, "espanol")
-        console.log("done!")
+    const collectionRef = collection(db, 'languages');
+    for (let object of english){
+        const docRef = await addDoc(collectionRef, object, "english")
+        console.log(docRef, "done!")
     }
   }
 
