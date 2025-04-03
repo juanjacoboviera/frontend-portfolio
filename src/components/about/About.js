@@ -76,9 +76,9 @@ const About = ({about, webtitles, spanish}) => {
             <div className="whatIdo-container">
                 <h3>{webtitles && webtitles.titles[2]}</h3>
                 <p>{about && about.whatIDo}</p>
-                <span className='btn-background'>
+                {/* <span className='btn-background'>
                 <a className='generic-btn cv-btn darker-hover' href={spanish ? cvEnglish : cvSpanish} download><FontAwesomeIcon icon={faDownload}/>{webtitles && webtitles.buttons[1]}</a>
-                </span>
+                </span> */}
             </div>
             <div className="skills-container">
             <Slider {...settings}>
