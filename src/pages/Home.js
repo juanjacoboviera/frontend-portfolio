@@ -24,7 +24,7 @@ useEffect(() => {
     const browserLanguage = window.navigator.language;
     if (browserLanguage.startsWith('es')) {
       setSpanish(true);
-      const spanishDocId = 'QKA8UF6LtOqpPXF3OQYT';
+      const spanishDocId = 'TVeBYotDIeUsouOosSZ4';
       const getDoc = async () => {
       const docData = await getDocument('languages', spanishDocId);
       setProfileData(docData);
@@ -32,7 +32,7 @@ useEffect(() => {
       getDoc()
     } else {
       setSpanish(false);
-      const englishDocId = 'WLBauG4KmgkWVdt0dWsu';
+      const englishDocId = 'WlakHeZ0rJMzGvYbTOzS';
       const getDoc = async () => {
       const docData = await getDocument('languages', englishDocId);
       setProfileData(docData);
@@ -87,7 +87,7 @@ const seeMoreSwitch = (switchType) => {
     <>
    <header>
     {/* The button below triggers the helper function that updates the firebase collection */}
-    {/* <button onClick={addCollectionAndDocuments}>export</button>  */}
+    {/* <button onClick={addCollectionAndDocuments}>export</button> */}
       <Nav navItems={webtitles?.nav} spanish={spanish} setSpanish={setSpanish} setManuallySetLanguage={setManuallySetLanguage}/>
       <HeaderTitle title={about?.title}/>
    </header>
