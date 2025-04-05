@@ -17,8 +17,8 @@ const firebaseConfig = {
 
   export const addCollectionAndDocuments =  async () =>{
     const collectionRef = collection(db, 'languages');
-    for (let object of espanol){
-        const docRef = await addDoc(collectionRef, object, "espanol")
+    for (let object of english){
+        const docRef = await addDoc(collectionRef, object, "english")
         console.log(docRef, "done!")
     }
   }

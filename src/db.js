@@ -3,14 +3,14 @@
       [{
         webtitles:{
             nav: ['Bio', 'Projects', 'Repositories', 'Tech-Stack'],
-            titles: ['Biography', 'Lets Connect', 'What I do', 'Featured Projects', 'My Repositories', 'My Tech-Stack'], 
+            titles: ['Bio', 'Lets Connect', 'What I do', 'Featured Projects', 'My Repositories', 'My Tech-Stack'], 
             buttons: ['Lets Connect', 'Download my CV', 'See More', 'See Less' ,'Contact me' ]
         },
         about: {
-            title:"Hello, my name is Jacobo, and I am a frontend developer with a strong passion for great design.",
+            title:"Hello, my name is Jacobo, and I am a web developer with a strong passion for great design.",
             img: "https://i.imgur.com/8GOc7sO.jpeg",
             bio: "I am deeply passionate about technology and design. To me, these two fields are like puzzle pieces that fit together perfectly, creating something truly remarkable when properly combined.",
-            whatIDo: "I use programming languages and web development frameworks to build websites and web applications that deliver exceptional online experiences, meeting high standards and user expectations.",
+            whatIDo: "I use design principles, programming languages and web development frameworks to build websites and web applications that deliver exceptional online experiences, meeting high standards and user expectations.",
             skills: [
                 {title: "Web Development", description: " I work with HTML5, CSS, JavaScript and React.JS. These technologies enable me to craft dynamic user experiences.", icon: "webDesign"}, 
                 {title: "UI Design", description: "I develop user flows, wireframes, and prototypes that clearly communicate design concepts and solutions.", icon: "uiDesign"},
@@ -103,14 +103,14 @@
       [{
         webtitles:{
             nav: ['Bio', 'Proyectos', 'Repositorios', 'Tecnologías'],
-            titles: ['Biografía', 'Conectemos', 'Mi Especialidad', 'Proyectos Destacados', 'Mis Repositorios', 'Trabajo con'], 
+            titles: ['Bio', 'Conectemos', 'Mi Especialidad', 'Proyectos Destacados', 'Mis Repositorios', 'Trabajo con'], 
             buttons: ['Conectemos', 'Descarga mi CV', 'Ver Más',  'Ver Menos','Contáctame']
         },
         about: {
-            title:"¡Hola! Me llamo Jacobo y soy un desarrollador frontend apasionado por el diseño de calidad.",
+            title:"¡Hola! Me llamo Jacobo y soy un desarrollador web apasionado por el diseño de calidad.",
             img: "https://i.imgur.com/8GOc7sO.jpeg",
-            bio: "Soy un apasionado por la tecnología y el diseño. Para mí, estos dos campos son como piezas de un rompecabezas que encajan perfectamente, creando productos extraordinarios cuando se integran de forma adecuada.",
-            whatIDo: "Utilizo lenguajes de programación y frameworks de desarrollo web para construir sitios y aplicaciones que brindan experiencias de usuario excepcionales, cumpliendo con altos estándares y expectativas.",
+            bio: "Soy un apasionado por la tecnología y el diseño. Veo ambos como dos lenguajes distintos que, cuando se entienden y se combinan, permiten contar historias únicas a través de productos que conectan con las personas.",
+            whatIDo: "Utilizo los principios del diseño, lenguajes de programación y frameworks de desarrollo web para construir sitios y aplicaciones que brindan experiencias de usuario excepcionales, cumpliendo con altos estándares y expectativas.",
             skills: [
                 {title: "Desarrollo Web", description: "Trabajo con HTML5, CSS, JavaScript y React.JS. Estas tecnologías me permiten crear experiencias dinámicas para el usuario.", icon: "webDesign"}, 
                 {title: "Diseño UI", description: "Desarrollo flujos de usuario, wireframes y prototipos que comunican conceptos y soluciones de diseño.", icon: "uiDesign"},
