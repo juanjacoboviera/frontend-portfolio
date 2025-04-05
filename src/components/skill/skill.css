@@ -1,5 +1,5 @@
 .slick-list {
-    height: 250px;
+    height: 250px !important;
 }
 
 .skill-card {
