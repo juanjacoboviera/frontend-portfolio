@@ -1,38 +1,43 @@
-.skill-card{
+.slick-list {
+    height: 250px;
+}
+
+.skill-card {
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: auto;
-    height: 190px;
+    /* height: 190px; */
+    height: 215px;
     background-color: #323443;
     border-radius: 12px;
     padding: 0 10px;
     margin: 0 20px;
 }
 
-.iconBackground{
+.iconBackground {
     position: absolute;
     top: 3%;
     left: 50%;
     transform: translate(-50%, -50%);
-   display: flex;
-   justify-content: center;
-   align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 72px;
     height: 72px;
     border-radius: 50%;
-    background: linear-gradient(165deg, rgba(59,246,134,1) 48%, rgba(76,169,255,1) 71%);
+    background: linear-gradient(165deg, rgba(59, 246, 134, 1) 48%, rgba(76, 169, 255, 1) 71%);
     box-shadow: 0 0 0 2px #323443;
     text-align: center;
     line-height: 30px;
 }
 
-.skill-icon{
-  font-size: 20px;
-  color: white;
-  background:  #323443;
+.skill-icon {
+    font-size: 20px;
+    color: white;
+    background: #323443;
     border-radius: 50%;
     padding: 24px;
 }
@@ -43,4 +48,8 @@
     font-size: 14px;
     color: #EFEDE8;
 
+}
+
+.padding-top {
+    padding-top: 10px;
 }

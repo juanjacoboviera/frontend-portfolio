@@ -9,7 +9,7 @@ const Skill = ({icon, title, description}) => {
         <div className="iconBackground">
             <FontAwesomeIcon icon={icon} className='skill-icon'/>
         </div>
-    <h4>{title}</h4>
+    <h4 className='padding-top'>{title}</h4>
     <p>{description}</p>
     </div>
   )
