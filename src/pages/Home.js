@@ -9,6 +9,7 @@ import Footer from '../components/footer/Footer'
 import { getDocument, addCollectionAndDocuments } from '../utils/firebase/firebase.utils'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faNavicon } from '@fortawesome/free-solid-svg-icons'
+import Spinner from '../components/spinner/Spinner'
 
 const Home = () => {
 const [profileData, setProfileData] = useState({});
@@ -18,44 +19,74 @@ const [minHeight, setMinHeight] = useState(0);
 const [spanish, setSpanish] = useState(false);
 const [manuallySetLanguage, setManuallySetLanguage] = useState(false);
 const {webtitles, about, Repos, techStack, projects} = profileData
+const [status, setStatus] = useState({
+  loading: false,
+  success: false,
+  error: null,
+});
+
+// useEffect(() => {
+//   if (!manuallySetLanguage) {
+//     const browserLanguage = window.navigator.language;
+//     if (browserLanguage.startsWith('es')) {
+//       setSpanish(true);
+//       const spanishDocId = 'Y4NoKtU9PXDlzix7q9QC';
+//       const getDoc = async () => {
+//       const docData = await getDocument('languages', spanishDocId);
+//       setProfileData(docData);
+//     };
+//       getDoc()
+//     } else {
+//       setSpanish(false);
+//       const englishDocId = 'Zs8fygCun1oJHS3KZZLN';
+//       const getDoc = async () => {
+//       const docData = await getDocument('languages', englishDocId);
+//       setProfileData(docData);
+//       };
+//       getDoc()
+//     }
+//   }
+
+//   if (manuallySetLanguage == true && spanish == true ) {
+//     const spanishDocId = 'Y4NoKtU9PXDlzix7q9QC';
+//     const getDoc = async () => {
+//       const docData = await getDocument('languages', spanishDocId);
+//       setProfileData(docData);
+//     };
+//     getDoc();
+//   } if (manuallySetLanguage == true && spanish == false ) {
+//     const englishDocId = 'Zs8fygCun1oJHS3KZZLN';
+//     const getDoc = async () => {
+//       const docData = await getDocument('languages', englishDocId);
+//       setProfileData(docData);
+//     };
+//     getDoc();
+//   }
+// }, [spanish, manuallySetLanguage]);
 
 useEffect(() => {
-  if (!manuallySetLanguage) {
-    const browserLanguage = window.navigator.language;
-    if (browserLanguage.startsWith('es')) {
-      setSpanish(true);
-      const spanishDocId = 'Y4NoKtU9PXDlzix7q9QC';
-      const getDoc = async () => {
-      const docData = await getDocument('languages', spanishDocId);
-      setProfileData(docData);
-    };
-      getDoc()
-    } else {
-      setSpanish(false);
-      const englishDocId = 'Zs8fygCun1oJHS3KZZLN';
-      const getDoc = async () => {
-      const docData = await getDocument('languages', englishDocId);
-      setProfileData(docData);
-      };
-      getDoc()
-    }
-  }
+  const fetchData = async () => {
+    setStatus({ loading: true, success: false, error: null });
 
-  if (manuallySetLanguage == true && spanish == true ) {
-    const spanishDocId = 'Y4NoKtU9PXDlzix7q9QC';
-    const getDoc = async () => {
-      const docData = await getDocument('languages', spanishDocId);
+    const isSpanish =
+      manuallySetLanguage ? spanish : window.navigator.language.startsWith('es');
+    const docId = isSpanish
+      ? 'Y4NoKtU9PXDlzix7q9QC'
+      : 'Zs8fygCun1oJHS3KZZLN';
+
+    setSpanish(isSpanish); // if not manually set
+
+    try {
+      const docData = await getDocument('languages', docId);
       setProfileData(docData);
-    };
-    getDoc();
-  } if (manuallySetLanguage == true && spanish == false ) {
-    const englishDocId = 'Zs8fygCun1oJHS3KZZLN';
-    const getDoc = async () => {
-      const docData = await getDocument('languages', englishDocId);
-      setProfileData(docData);
-    };
-    getDoc();
-  }
+      setStatus({ loading: false, success: true, error: null });
+    } catch (err) {
+      console.error('Error fetching document:', err);
+      setStatus({ loading: false, success: false, error: 'Failed to load language data.' });
+    }
+  };
+
+  fetchData();
 }, [spanish, manuallySetLanguage]);
 
 
@@ -85,30 +116,36 @@ const seeMoreSwitch = (switchType) => {
 }
   return (
     <>
-   <header>
-    {/* The button below triggers the helper function that updates the firebase collection */}
-    {/*<button onClick={addCollectionAndDocuments}>export</button>*/}
-      <Nav navItems={webtitles?.nav} spanish={spanish} setSpanish={setSpanish} setManuallySetLanguage={setManuallySetLanguage}/>
-      <HeaderTitle title={about?.title}/>
-   </header>
-   <main>
-      <About about={about} webtitles={webtitles} spanish={spanish}/>
-      <section id={spanish == true? 'proyectos' : 'projects'} className='projects-section'>
-          <h2>{webtitles?.titles[3]}</h2>
-          <div className={`projects-container ${moreProjectsBtn ? 'showAll-projects' : ''}`}>
-          {projects?.map(project => <Projects key={project.title} project={project}/> )}
-          </div>
-          <SeeMoreBtn onClick={() => {seeMoreSwitch(setMoreProjectsBtn)}} title={moreProjectsBtn ? webtitles?.buttons[3] : webtitles?.buttons[2]} iconName={faNavicon}/>
-        </section>
-      <section id={spanish == true? 'repositorios' : 'repositories'}  className='repos-section'>
-        <h2>{webtitles?.titles[4]}</h2>
-        <div className={`repos-container ${moreReposBtn ? 'showAll-repos' : ''}`}>
-        {Repos?.map(repo => <Repo key={repo.title} repo={repo} minHeight={minHeight}/> )}
-        </div>
-          <SeeMoreBtn onClick={() => {seeMoreSwitch(setMoreReposBtn)}} title={moreReposBtn ? webtitles?.buttons[3] : webtitles?.buttons[2]} iconName={faNavicon}/>
-      </section>
-   </main>
-   <Footer techstack={techStack} webtitles={webtitles} spanish={spanish}/>
+    {status.loading && <Spinner/>}
+    {status.error && <p style={{ color: 'red' }}>{status.error}</p>}
+    {status.success && profileData && (
+      <>
+        <header>
+          {/* The button below triggers the helper function that updates the firebase collection */}
+          {/*<button onClick={addCollectionAndDocuments}>export</button>*/}
+            <Nav navItems={webtitles?.nav} spanish={spanish} setSpanish={setSpanish} setManuallySetLanguage={setManuallySetLanguage}/>
+            <HeaderTitle title={about?.title}/>
+        </header>
+        <main>
+            <About about={about} webtitles={webtitles} spanish={spanish}/>
+            <section id={spanish == true? 'proyectos' : 'projects'} className='projects-section'>
+                <h2>{webtitles?.titles[3]}</h2>
+                <div className={`projects-container ${moreProjectsBtn ? 'showAll-projects' : ''}`}>
+                {projects?.map(project => <Projects key={project.title} project={project}/> )}
+                </div>
+                <SeeMoreBtn onClick={() => {seeMoreSwitch(setMoreProjectsBtn)}} title={moreProjectsBtn ? webtitles?.buttons[3] : webtitles?.buttons[2]} iconName={faNavicon}/>
+              </section>
+            <section id={spanish == true? 'repositorios' : 'repositories'}  className='repos-section'>
+              <h2>{webtitles?.titles[4]}</h2>
+              <div className={`repos-container ${moreReposBtn ? 'showAll-repos' : ''}`}>
+              {Repos?.map(repo => <Repo key={repo.title} repo={repo} minHeight={minHeight}/> )}
+              </div>
+                <SeeMoreBtn onClick={() => {seeMoreSwitch(setMoreReposBtn)}} title={moreReposBtn ? webtitles?.buttons[3] : webtitles?.buttons[2]} iconName={faNavicon}/>
+            </section>
+        </main>
+        <Footer techstack={techStack} webtitles={webtitles} spanish={spanish}/>
+      </>  
+    )}
     </>
   )
 }
